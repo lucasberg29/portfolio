@@ -1,9 +1,23 @@
 import './App.css';
-import HomePage from './HomePage.jsx';
+import HomePage from './pages/HomePage.jsx';
+import GamesPage from './pages/GamesPage.jsx'
+import AboutMePage from './pages/AboutMePage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import Navigation from './Navigation.jsx'
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <HomePage/>
+    <div>
+      <Navigation/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/games" element={<GamesPage />} />
+        <Route path="/about" element={<AboutMePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </div>
   );
 }
 
