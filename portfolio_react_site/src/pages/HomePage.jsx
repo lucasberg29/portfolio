@@ -1,13 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
-  const goToAbout = () => {
-    navigate('/about');
-  };
+  // const goToAbout = () => {
+  //   navigate('/about');
+  // };
+
 
   return(
     <div className="HomePage">
