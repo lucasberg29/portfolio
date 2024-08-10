@@ -1,0 +1,24 @@
+.navigation{
+  width: 100%;
+}
+
+.navLink {
+    display: block;
+    margin-top: 1rem; // mt-4 corresponds to margin-top: 1rem;
+    color: #4fd1c5; // text-teal-200
+    margin-right: 1rem; // mr-4 corresponds to margin-right: 1rem;
+    text-decoration: none; 
+  
+    &:hover {
+      color: white;
+    }
+  
+    @media (min-width: 1024px) { // lg: corresponds to the large breakpoint in Tailwind (1024px)
+      display: inline-block; // lg:inline-block
+      margin-top: 0; // lg:mt-0 corresponds to margin-top: 0;
+    }
+  }
+
+.activeNavLink{
+    color: white !important;
+}
