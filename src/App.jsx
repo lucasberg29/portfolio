@@ -1,6 +1,6 @@
 import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate  } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import GamesPage from './pages/GamesPage.jsx'
 import AboutMePage from './pages/AboutMePage.jsx';
@@ -21,6 +21,7 @@ function App() {
           <Route path= {`${baseURL}games`} element={<GamesPage />} />
           <Route path= {`${baseURL}about`} element={<AboutMePage />} />
           <Route path= {`${baseURL}contact`} element={<ContactPage />} />
+          <Route path= {`${baseURL}`} element={<Navigate to={`${baseURL}home`} />} />
         </Routes>
       </div>
   );

@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
-import UnityGame from "../components/UnityGame.jsx";
 
-function GamesPage() {
+function GamesPage({gameName}) {
 
     const baseURL = import.meta.env.VITE_BASE_URL;
-    const gamePath = `${baseURL}games/flappyDuck/Build/`
+    const gamePath = `${baseURL}games/${gameName}/Build/`
 
     const {unityProvider} = useUnityContext({
         arguments: [],
@@ -15,15 +14,8 @@ function GamesPage() {
         codeUrl:        gamePath + "WebGL.wasm",
     });
 
-    useEffect(() => {
-        console.log("UnityContext:", unityProvider);
-      }, [unityProvider]);
-
     return (        
-        <div className="GamesPage">
-            <h1>Games Page</h1>
-            <UnityGame gameName="flappyDuck" className='unityGame' unityProvider={unityProvider} />
-        </div>
+        <Unity className='unityGame' unityProvider={unityProvider} />
     ) 
 }
 
