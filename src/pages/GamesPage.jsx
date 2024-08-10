@@ -2,12 +2,16 @@ import React, { useEffect } from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 function GamesPage() {
+
+    const baseURL = import.meta.env.VITE_BASE_URL;
+    const gamePath = `${baseURL}games/flappyDuck/Build/`
+
     const {unityProvider} = useUnityContext({
         arguments: [],
-        loaderUrl:      "/games/flappyDuck/Build/WebGL.loader.js",
-        dataUrl:        "/games/flappyDuck/Build/WebGL.data",
-        frameworkUrl:   "/games/flappyDuck/Build/WebGL.framework.js",
-        codeUrl:        "/games/flappyDuck/Build/WebGL.wasm",
+        loaderUrl:      gamePath + "WebGL.loader.js",
+        dataUrl:        gamePath + "WebGL.data",
+        frameworkUrl:   gamePath + "WebGL.framework.js",
+        codeUrl:        gamePath + "WebGL.wasm",
     });
 
     useEffect(() => {

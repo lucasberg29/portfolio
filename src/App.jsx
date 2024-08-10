@@ -11,14 +11,16 @@ import './index.css'
 import './App.css'
 
 function App() {
+
+  const baseURL = import.meta.env.VITE_BASE_URL;
   return (
       <div>
         <Navigation className="navigation"/>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/games" element={<GamesPage />} />
-          <Route path="/about" element={<AboutMePage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path= {`${baseURL}home`} element={<HomePage />} />
+          <Route path= {`${baseURL}games`} element={<GamesPage />} />
+          <Route path= {`${baseURL}about`} element={<AboutMePage />} />
+          <Route path= {`${baseURL}contact`} element={<ContactPage />} />
         </Routes>
       </div>
   );
