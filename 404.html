@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 Not Found</title>
+    <script>
+      // Redirect to index.html for single-page apps
+      (function() {
+        var path = window.location.pathname;
+        if (path !== '/' && !path.startsWith('/repo-name/')) {
+          window.location.replace('/repo-name/');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
