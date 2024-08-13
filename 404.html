@@ -7,18 +7,22 @@
     <script>
       (function() {
         var path = window.location.pathname;
-        var basePath = '/portfolio/'; // Adjust this to your site's base path
+        var basePath = '/portfolio/'; // Set this to your base path
 
-        if (path === '/' || path.startsWith(basePath)) {
-          // If the path is the root or within the portfolio, redirect to the correct React route
+        if (path.startsWith(basePath)) {
+          // If the path is within your React app's base path, reload the same path
           window.location.replace(path);
+        } else if (path === '/') {
+          // If it's the root, do nothing (or redirect to a specific route if needed)
+          window.location.replace(basePath);
         } else {
-          // Otherwise, redirect to the homepage
+          // For all other paths, redirect to your base path
           window.location.replace(basePath);
         }
       })();
     </script>
   </head>
   <body>
+    <!-- You can include a brief message or a loading spinner here -->
   </body>
 </html>
