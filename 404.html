@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
     <script>
-      (function() {
-        var path = window.location.pathname;
-        console.log("path: " + path)
-        if (path !== '/' && !path.startsWith('/portfolio/')) {
-            window.location.replace('/portfolio/');
-            console.log("new path: " +  window.location.pathname)
-        }
-        else
-        {
-            
-        }
-      })();
-    </script>
+        // JavaScript redirect as a fallback
+        setTimeout(function () {
+          var path = window.location.pathname;
+          window.location.replace('/' + path);
+        }, 0);
+      </script>
   </head>
   <body>
   </body>
