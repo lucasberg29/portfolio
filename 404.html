@@ -9,12 +9,12 @@
         var path = window.location.pathname;
         console.log("path: " + path)
         if (path !== '/' && !path.startsWith('/portfolio/')) {
-          window.location.replace('/portfolio/');
-          console.log("new path: " +  window.location.pathname)
+            window.location.replace('/portfolio/');
+            console.log("new path: " +  window.location.pathname)
         }
         else
         {
-            window.location.replace('/portfolio/');
+            window.location.replace(window.location.pathname);
             console.log("new path: " +  window.location.pathname)
         }
       })();
