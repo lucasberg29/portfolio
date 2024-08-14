@@ -7,8 +7,10 @@
     <script>
       (function() {
         var path = window.location.pathname;
+        console.log("path: " + path)
         if (path !== '/' && !path.startsWith('/portfolio/')) {
           window.location.replace('/portfolio/');
+          console.log("new path: " +  window.location.pathname)
         }
       })();
     </script>
