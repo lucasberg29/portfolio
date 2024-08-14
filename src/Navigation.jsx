@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Navigation = () => {
+function Navigation ({ onNavigate }) {
     const baseURL = import.meta.env.VITE_BASE_URL;
     return (
         <div style={{width: "100%"}}>
@@ -13,10 +13,10 @@ const Navigation = () => {
                 </div>
                 <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div className="text-sm lg:flex-grow">
-                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} to={`${baseURL}home`}>Home</NavLink>
-                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} to={`${baseURL}games`}>Games</NavLink>
-                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} to={`${baseURL}about`}>About</NavLink>
-                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} to={`${baseURL}contact`}>Contact</NavLink>
+                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} onClick={() => onNavigate('home')} to={`${baseURL}home`}>Home</NavLink>
+                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} onClick={() => onNavigate('games')} to={`${baseURL}games`}>Games</NavLink>
+                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} onClick={() => onNavigate('about')} to={`${baseURL}about`}>About</NavLink>
+                        <NavLink className={({ isActive }) => `navLink ${isActive ? 'activeNavLink' : ''}`} onClick={() => onNavigate('contact')} to={`${baseURL}contact`}>Contact</NavLink>
                     </div>
                     <div>
                         {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}

@@ -9,8 +9,5 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
     },
-        server: {
-      cors: true,
-    },
   }
 })
