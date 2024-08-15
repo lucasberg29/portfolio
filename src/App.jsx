@@ -14,25 +14,21 @@ import './App.css'
 function App() {
 
   const baseURL = import.meta.env.VITE_BASE_URL;
-  const [selectedPage, setSelectedPage] = useState(() => {
-    return localStorage.getItem('selectedPage') || 'home';
-  });
+  const [selectedPage, setSelectedPage] = useState('home');
 
   const handleNavigation = (path) => {
     setSelectedPage(path);
-    localStorage.setItem('selectedPage', path);
   };
 
   return (
       <div>
         <Navigation onNavigate={handleNavigation} className="navigation"/>
         <Routes>
-          <Route path="/" element={<Navigate to={`${baseURL}${selectedPage}`} />} />
+          <Route path="/" element={<HomePage />} />
           <Route path= {`${baseURL}home`} element={<HomePage />} />
           <Route path= {`${baseURL}games`} element={<GamesPage />} />
           <Route path= {`${baseURL}about`} element={<AboutMePage />} />
           <Route path= {`${baseURL}contact`} element={<ContactPage />} />
-          <Route path="*" element={<Navigate to={`${baseURL}${selectedPage}`}/>} />
         </Routes>
       </div>
   );
