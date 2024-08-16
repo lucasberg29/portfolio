@@ -22,14 +22,14 @@ function App() {
 
   return (
       <div>
-        <Navigation onNavigate={handleNavigation} className="navigation"/>
+        <Navigation currentPage={selectedPage} onNavigate={handleNavigation} className="navigation"/>
         <Routes>
-          <Route path= {`/`} element={<HomePage currentPage={selectedPage} />} />
-          <Route path= {`home`} element={<HomePage currentPage={selectedPage} />} />
-          <Route path= {`games`} element={<GamesPage />} />
-          <Route path= {`about`} element={<AboutMePage />} />
-          <Route path= {`contact`} element={<ContactPage />} />
-          <Route path= {`*`} element={<HomePage />} />
+          <Route path= {`/`} element={<HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path= {`home`} element={<HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path= {`games`} element={<GamesPage setSelectedPage={setSelectedPage} />} />
+          <Route path= {`about`} element={<AboutMePage setSelectedPage={setSelectedPage} />} />
+          <Route path= {`contact`} element={<ContactPage setSelectedPage={setSelectedPage} />} />
+          <Route path= {`*`} element={<HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />} />
         </Routes>
       </div>
   );

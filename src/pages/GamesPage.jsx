@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
 import UnityGame from "../components/UnityGame.jsx";
 
-function GamesPage() {
+function GamesPage({setSelectedPage}) {
+
+    useEffect(() => {
+        setSelectedPage('games');
+      }, []); 
 
     const baseURL = import.meta.env.VITE_BASE_URL;
     const gamePath = `${baseURL}games/flappyDuck/Build/`

@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 
-function HomePage({currentPage}) {
+function HomePage({setSelectedPage, currentPage}) {
   useEffect(() => {
-    console.log(currentPage + ' before');
-    currentPage = 'home';
-    console.log("Home page loaded!");
-    console.log(currentPage + ' after');
+    setSelectedPage('home');
   }, []); 
 
   return(
