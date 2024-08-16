@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ mode }) => { 
   return {
     plugins: [react()],
-    base: mode === 'development' ? '/' : '/portfolio/',
+    base: '/',
     build: {
       outDir: 'dist',
     },
