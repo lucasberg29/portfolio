@@ -22,3 +22,15 @@
 .activeNavLink{
     color: white !important;
 }
+
+.navLinkRight{
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.githubIcon {
+  width: 20px;
+  height: 20px;
+}

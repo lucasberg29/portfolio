@@ -22,6 +22,7 @@ function Navigation ({ onNavigate, currentPage }) {
                         <NavLink className={`navLink ${isNavCurrentPage('games') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('games')} to={`games`}>Games</NavLink>
                         <NavLink className={`navLink ${isNavCurrentPage('about') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('about')} to={`about`}>About</NavLink>
                         <NavLink className={`navLink ${isNavCurrentPage('contact') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('contact')} to={`contact`}>Contact</NavLink>
+                        <NavLink className={`navLinkRight`} to="https://github.com/lucasberg29">Github</NavLink>
                     </div>
                     <div>
                         {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}

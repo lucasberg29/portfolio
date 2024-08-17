@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 import { Routes, Route, Navigate  } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
-import GamesPage from './pages/GamesPage.jsx'
+import GamesPage from './pages/GamesPage.jsx';
 import AboutMePage from './pages/AboutMePage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import NotFound from './components/NotFound.jsx';
-import Navigation from './Navigation.jsx'
-import './styles/site.scss'
-import './index.css'
-import './App.css'
+import Navigation from './components/Navigation.jsx';
+import './styles/site.scss';
+import './index.css';
+import './App.css';
 
 function App() {
 
