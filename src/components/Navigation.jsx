@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import itchIcon from '../assets/itch-io-svgrepo-com.svg';
 
 function Navigation ({ onNavigate, currentPage }) {
     const baseURL = import.meta.env.VITE_BASE_URL;
@@ -22,10 +24,12 @@ function Navigation ({ onNavigate, currentPage }) {
                         <NavLink className={`navLink ${isNavCurrentPage('games') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('games')} to={`games`}>Games</NavLink>
                         <NavLink className={`navLink ${isNavCurrentPage('about') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('about')} to={`about`}>About</NavLink>
                         <NavLink className={`navLink ${isNavCurrentPage('contact') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('contact')} to={`contact`}>Contact</NavLink>
-                        <NavLink className={`navLinkRight`} to="https://github.com/lucasberg29">Github</NavLink>
-                    </div>
-                    <div>
-                        {/* <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a> */}
+                        <a className="navLinkRight" href="https://github.com/lucasberg29" target="_blank" rel="noopener noreferrer">
+                            <GitHubIcon style={{ width: '34px', height: '34px' }}/>
+                        </a>
+                        <a className="navLinkRight" href="https://lucasberg29.itch.io/">
+                            <img  width="100%" className="itchIcon" src={itchIcon} alt="itch.io logo"></img>
+                        </a>
                     </div>
                 </div>
             </nav>

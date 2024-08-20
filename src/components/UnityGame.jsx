@@ -1,5 +1,6 @@
 import React from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
+import Button from '@mui/material/Button';
 
 function GamesPage({gameName}) {
 
@@ -14,18 +15,18 @@ function GamesPage({gameName}) {
     });
 
     function pauseGame() {
-        sendMessage("_LevelManager", "PauseGame");
+        sendMessage("_ReactController", "PauseGame");
     }
     
     function startGame() {
-        sendMessage("_LevelManager", "ResumeGame");
+        sendMessage("_ReactController", "ResumeGame");
     }
 
     return (  
         <div>
             <Unity className='unityGame' unityProvider={unityProvider} />
-            <button onClick={startGame}>Start Game</button>
-            <button onClick={pauseGame}>Pause Game</button>
+            <Button onClick={startGame}>Start Game</Button>
+            <Button onClick={pauseGame}>Pause Game</Button>
         </div>   
     ) 
 }
