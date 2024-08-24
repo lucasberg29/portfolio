@@ -3,49 +3,51 @@ import { TextField, Button, Box, Typography } from '@mui/material';
 import emailjs from 'emailjs-com';
 
 function ContactForm() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [status, setStatus] = useState('');
+   const [name, setName] = useState('');
+   const [email, setEmail] = useState('');
+   const [message, setMessage] = useState('');
+   const [status, setStatus] = useState('');
+   const [responseClass, setResponseClass] = useState('success');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+   const handleSubmit = (event) => {
+      event.preventDefault();
 
-        if (!name || !email || !message) {
-            setStatus('Please fill out all fields.');
-            return;
-        }
+      if (!name || !email || !message) {
+         setStatus('Please fill out all fields.');
+         setResponseClass('warning');
+         return;
+      }
 
-        const templateParams = {
-            from_name: name,
-            message: message,
-            user_email: email
-        };
+      const templateParams = {
+         from_name: name,
+         message: message,
+         user_email: email,
+         reply_to: email,
+      };
 
-        emailjs.send('service_lvgtz8h', 'template_hoxv9ns', templateParams, 'QkssPB9PI7OzDeDPs')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                setStatus('Message sent successfully!');
-                setName('');
-                setEmail('');
-                setMessage('');
-        })
-            .catch((error) => {
-                console.log('FAILED...', error);
-                setStatus('Failed to send message. Please try again later.');
-         });
+      emailjs.send('service_lvgtz8h', 'template_hoxv9ns', templateParams, 'QkssPB9PI7OzDeDPs')
+         .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setStatus('Message sent successfully!');
+            setResponseClass('success');
+            setName('');
+            setEmail('');
+            setMessage('');
+      })
+         .catch((error) => {
+            console.log('FAILED: ', error);
+            setStatus('Failed to send message. Please try again.');
+            setResponseClass('failed');
+      });
    };
 
    return (
-        <Box sx={{ maxWidth: 600, mx: 'auto', p: 2, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
-            <Typography variant="h4" component="h1" gutterBottom>
-                Contact Me
-            </Typography>
-            <form onSubmit={handleSubmit}>
-            <TextField
-               fullWidth
-               label="Name"
-               value={name}
+      <Box sx={{ maxWidth: 600, mx: 'auto', p: 2, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
+         <Typography variant="h4" component="h1" gutterBottom>
+            Contact Me
+         </Typography>
+         <form onSubmit={handleSubmit}>
+            <TextField fullWidth label="Name"value={name}
                onChange={(e) => setName(e.target.value)}
                variant="outlined"
                margin="normal"
@@ -83,10 +85,10 @@ function ContactForm() {
             </Button>
          </form>
          {status && (
-            <Typography variant="body1" color="textSecondary" align="center" sx={{ mt: 2 }}>
-               {status}
-            </Typography>
-         )}
+         <Typography className={`statusMessage ${responseClass}`} variant="body1" color="textSecondary" align="center" sx={{ mt: 2 }}>
+            {status}
+         </Typography>
+            )}
       </Box>
    );
 }

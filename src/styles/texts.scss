@@ -1,0 +1,15 @@
+
+.statusMessage{
+
+    &.success{
+        color: green;
+    }
+
+    &.warning{
+        color: yellow;
+    }
+
+    &.failed{
+        color: red;
+    }
+}
