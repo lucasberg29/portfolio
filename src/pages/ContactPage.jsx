@@ -1,4 +1,5 @@
 import React, { useEffect }  from 'react';
+import ContactForm from '../components/ContactForm';
 
 function ContactPage({setSelectedPage}) {
     useEffect(() => {
@@ -8,6 +9,7 @@ function ContactPage({setSelectedPage}) {
     return(
     <div className="contactPage">
         <h1>Contact</h1>
+        <ContactForm></ContactForm>
     </div>
     );
 }
