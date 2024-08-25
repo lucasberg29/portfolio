@@ -25,7 +25,7 @@ function ContactForm() {
          reply_to: email,
       };
 
-      emailjs.send('service_lvgtz8h', 'template_hoxv9ns', templateParams, 'QkssPB9PI7OzDeDPs')
+      emailjs.send('service_lvgtz8h', 'template_p5gpgwg', templateParams, 'QkssPB9PI7OzDeDPs')
          .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             setStatus('Message sent successfully!');
