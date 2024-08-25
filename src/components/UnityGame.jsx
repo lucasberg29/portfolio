@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
 import Button from '@mui/material/Button';
 import { stringUtils } from '../tools/utils';
+import { Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 
 function GamesPage({gameName}) {
 
@@ -33,29 +35,30 @@ function GamesPage({gameName}) {
     return (  
         <div className="gameCard">
             <h1>{gameTitle}</h1>
-            <img
-                src={`${baseURL}games/${gameName}/art/gameCover.png`} // Update the image URL
-                className="gameCover"
-                alt="Overlay"
-            />
+            <a onClick={startGame} className="gameCoverClick">
+                <img
+                    src={`${baseURL}games/${gameName}/art/gameCover.png`} // Update the image URL
+                    className="gameCover"
+                    alt="Overlay"
+                />
+            </a>
             <Button onClick={startGame}>Start Game</Button>
             <Button onClick={pauseGame}>Pause Game</Button>
             <Modal show={isModalOpen} onClose={closeModal}>
-                <h2>{gameTitle}</h2>
+                <h2 className="modalGameTitle">{gameTitle}</h2>
                 <Unity className='unityGame' unityProvider={unityProvider} > </Unity>
-                <button onClick={closeModal}>Close</button>
             </Modal>
         </div>   
     ) 
 }
 
 const Modal = ({ show, onClose, children }) => {
-    if (!show) return null; // Don't render if `show` is false
+    if (!show) return null;
 
     return (
-        <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-overlay modalHeader" onClick={onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
-                <button className="close-button" onClick={onClose}>×</button>
+                <CloseIcon className="closeGameIcon" onClick={onClose}></CloseIcon>
                 {children}
             </div>
         </div>
