@@ -10,7 +10,12 @@ function GamesPage({gameName}) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        restartGame();
+        pauseGame();
+    }
 
     const gameTitle = stringUtils.ConvertCamelCaseToTitleCase(gameName);
     const baseURL = import.meta.env.VITE_BASE_URL;
@@ -30,6 +35,10 @@ function GamesPage({gameName}) {
     function startGame() {
         openModal();
         sendMessage("_ReactController", "ResumeGame");
+    }
+
+    function restartGame() {
+        sendMessage("_ReactController", "RestartGame");
     }
 
     return (  
