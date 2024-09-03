@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import itchIcon from '../assets/itch-io-svgrepo-com.svg';
 
 function Navigation ({ onNavigate, currentPage }) {
-    const baseURL = import.meta.env.VITE_BASE_URL;
+    const [isNavigationExpanded, setIsNavigationExpanded] = useState(false);
 
     const isNavCurrentPage = (page) =>{
         return page === currentPage;
     }
 
-    function handleBurgerClick(target) {
-        console.log("handleBurgerClick()");
+    function handleBurgerClick() {
+        setIsNavigationExpanded(!isNavigationExpanded);
     }
 
     return (
@@ -44,6 +44,12 @@ function Navigation ({ onNavigate, currentPage }) {
                     </div>
                 </div>
             </nav>
+            <div className={isNavigationExpanded ? 'mobileNav expandedNav' : 'mobileNav'}>
+                <NavLink className={`navExpandedLink ${isNavCurrentPage('home') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('home')} to={`home`}>Home</NavLink>
+                <NavLink className={`navExpandedLink ${isNavCurrentPage('games') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('games')} to={`games`}>Games</NavLink>
+                <NavLink className={`navExpandedLink ${isNavCurrentPage('about') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('about')} to={`about`}>About</NavLink>
+                <NavLink className={`navExpandedLink ${isNavCurrentPage('contact') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('contact')} to={`contact`}>Contact</NavLink>
+            </div>
         </div>
     );
 };

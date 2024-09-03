@@ -53,7 +53,7 @@ function GamesPage({gameName}) {
             </a>
             <Button onClick={startGame}>Start Game</Button>
             <Button onClick={pauseGame}>Pause Game</Button>
-            <Modal show={isModalOpen} onClose={closeModal}>
+            <Modal className="gameModal" show={isModalOpen} onClose={closeModal}>
                 <h2 className="modalGameTitle">{gameTitle}</h2>
                 <Unity className='unityGame' unityProvider={unityProvider} > </Unity>
             </Modal>

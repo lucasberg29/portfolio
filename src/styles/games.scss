@@ -1,8 +1,10 @@
-$gameWidth: 1280px;
+$gameWidth: 800px;
 
 .unityGame{
-    width: $gameWidth;
-    height: calc(#{$gameWidth} * 9 / 16);
+    width: 100%;
+    height: 100%;
+    // width: $gameWidth;
+    // height: calc(#{$gameWidth} * 9 / 16);
     border: none;
 }
 
@@ -18,8 +20,6 @@ $gameWidth: 1280px;
 
 .gameCover {
     position: relative;
-    z-index: 10; 
-    pointer-events: none;
 }
 
 .modal-overlay {
@@ -32,13 +32,15 @@ $gameWidth: 1280px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     z-index: 1000;
 }
 
 .modal-content {
     background: white;
     border-radius: 8px;
-    width: $gameWidth;
+    width: 1280px;
+    height: calc(1280px * 9 / 16);
 }
 
 .close-button {
@@ -59,3 +61,16 @@ $gameWidth: 1280px;
     float:right;
     cursor: pointer;
 }
+
+// Media Queries
+@media (min-width: 500px) {
+    .navLinkLeft {
+      .navLink{
+        display: block;
+      }
+  
+      .menuBurger{
+        display: none;
+      }
+    }
+  }

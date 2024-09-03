@@ -1,6 +1,7 @@
 // src/styles/site.scss
 $primary-color: teal;
 
+@import 'roots';
 @import 'texts';
 @import 'navigation';
 @import 'pages';
