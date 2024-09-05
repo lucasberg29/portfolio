@@ -5,6 +5,13 @@
       "projectName": "flappyDuck",
       "description": "A flappy bird clone.",
       "version": "1.0.0"
+    },
+    {
+      "id": "2",
+      "name": "Human Parent",
+      "projectName": "humanParent",
+      "description": "Take care of your human!",
+      "version": "1.0.0"
     }
 ]
   

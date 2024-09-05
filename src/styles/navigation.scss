@@ -72,14 +72,14 @@ $primaryColor: #4fd1c5;
   width: 0;
   height: 0;
   color: black;
-  transition: width 0.4s ease, height 0.4s ease, background-color 0.4s ease;
+  transition: width 0.5s ease, height 0.8s ease, background-color 0.1s ease;
   overflow: hidden; 
 }
 
 .expandedNav {
   background-color: $primaryColor;
   width: 100%;
-  min-height: 10.5vh; /* Ensure a minimum height of 15% of the viewport height */
+  height: 100%;
 }
 
 .navExpandedLink{
