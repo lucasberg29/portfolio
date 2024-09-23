@@ -4,14 +4,24 @@
       "name": "Flappy Duck",
       "projectName": "flappyDuck",
       "description": "A flappy bird clone.",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "isRunning": false
     },
     {
       "id": "2",
       "name": "Human Parent",
       "projectName": "humanParent",
       "description": "Take care of your human!",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "isRunning": false
+    },    
+    {
+      "id": "3",
+      "name": "Cannon",
+      "projectName": "cannon",
+      "description": "Fire!",
+      "version": "1.0.0",
+      "isRunning": false
     }
 ]
   
