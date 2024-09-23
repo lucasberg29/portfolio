@@ -63,13 +63,14 @@ function GamesPage({ setSelectedPage }) {
     return (
         <div className="gamesPage">
             <h1>Games Page</h1>
+            <div className="unityGamesSection">
             <h1>Unity Games</h1>
-            <Swiper
-                slidesPerView={4}
-                navigation
-                loop
-                pagination={{ clickable: true }}
-            >
+                <Swiper
+                    slidesPerView={4}
+                    navigation
+                    loop
+                    pagination={{ clickable: true }}
+                >
                 {games.map(game => (
                     <SwiperSlide key={game.id}>
                         <div className="gameCard">
@@ -86,7 +87,8 @@ function GamesPage({ setSelectedPage }) {
                         </div>
                     </SwiperSlide>
                 ))}
-            </Swiper>
+                </Swiper>
+            </div>
             <hr />
             {games.map((game) =>
                 game.isRunning ? (
