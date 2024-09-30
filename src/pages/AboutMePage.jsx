@@ -6,7 +6,7 @@ function AboutMePage({setSelectedPage}) {
     }, []); 
 
     return(
-    <div className="AboutMe">
+    <div className="aboutPage">
         <h1>About Me</h1>
     </div>
     );

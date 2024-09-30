@@ -1,0 +1,20 @@
+@mixin pageSpacing{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.homePage{
+    @include pageSpacing;
+}
+
+.gamesPage{
+    @include pageSpacing;
+}
+
+.aboutPage{
+    @include pageSpacing;
+}
+
+.contactPage{
+    @include pageSpacing;
+}

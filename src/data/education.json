@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "courseName": "Game Development",
+        "institution": "Fanshawe College",
+        "location": "London, ON",
+        "startDate": "Sep 2023",
+        "endDate" : "present",
+        "bulletPoints": [
+            "Computer graphics and its implementation in games and simulations",
+            "Networking and Audio for game development", 
+            "Physics simulation in 3D", 
+            "Developed a functional custom game engine using C++ and OpenGL"
+        ]
+    },
+    {
+        "id": 2,
+        "courseName": "Computer Programming and Analysis",
+        "institution": "Fanshawe College",
+        "location": "London, ON",
+        "startDate": "Sep 2020",
+        "endDate" : "Apr 2023",
+        "bulletPoints": [
+            "Mobile development in Java", 
+            "Game development in Unity",
+            "Full-stack with .NET, React, and Vue, and SQL",
+            "Developed applications using declarative languages like XML, HTML, and JSON"
+        ]
+    },
+    {
+        "id": 3,
+        "courseName": "Mechanical Engineering",
+        "institution": "Cefet/RJ",
+        "location": "Rio de Janeiro, Brazil",
+        "startDate": "Aug 2011",
+        "endDate" : "Feb 2017",
+        "bulletPoints": [
+        ]
+    }
+]

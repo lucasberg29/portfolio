@@ -46,7 +46,24 @@ $gameWidth: 1600px;
 }
 
 .gameCard{
-    width: 300px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.swiper{
+    height: 350px;
+    border-left: 1px;
+}
+
+.swiper-pagination{
+    margin-top: 1000px !important; 
+}
+
+.swiper-wrapper{
+    padding-left: 35px;
 }
 
 .unity-container {
@@ -97,7 +114,7 @@ $gameWidth: 1600px;
     }
 
     .gamesPage{
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }

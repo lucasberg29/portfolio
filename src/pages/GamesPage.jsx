@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { Navigation, Pagination } from 'swiper/modules';  // Import Navigation and Pagination modules
+
 function GamesPage({ setSelectedPage }) {
     const baseURL = import.meta.env.VITE_BASE_URL;
 
@@ -51,7 +53,6 @@ function GamesPage({ setSelectedPage }) {
         }
     }
 
-    // New function to handle game click and update state correctly
     function handleGameClick(gameId) {
         setGames((prevGames) =>
             prevGames.map((g) =>
@@ -67,9 +68,11 @@ function GamesPage({ setSelectedPage }) {
             <h1>Unity Games</h1>
                 <Swiper
                     slidesPerView={4}
-                    navigation
+                    slidesPerGroup={1}
+                    navigation={true}
                     loop
                     pagination={{ clickable: true }}
+                    modules={[Navigation, Pagination]}  // Make sure to include the necessary modules
                 >
                 {games.map(game => (
                     <SwiperSlide key={game.id}>

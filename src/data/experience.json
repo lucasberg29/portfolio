@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "position": "Jr. Applications Developer Co-op",
+        "field": "Software Development",
+        "companyName": "Buckland",
+        "companyWebsite": "https://www.buckland.com/",
+        "location": "St. Thomas, ON",
+        "duration": "May 2023 to Sep 2023 and May 2024 to Sep 2024",
+        "bulletPoints": [
+            "Development of full-stack web applications using Blazor",
+            "Programming in C#, MySQL, JavaScript, and Sass",
+            "Implemented responsive web pages using UX/UI best practices"
+        ]
+    },
+    {
+        "id": 2,
+        "position": "Web Developer Co-op",
+        "field": "Software Development",
+        "companyName": "Northern Commerce",
+        "companyWebsite": "https://www.northern.co/",
+        "location": "London, ON",
+        "duration": "Sep 2022 to Dec 2022",
+        "bulletPoints": [
+            "Developed and maintained Drupal websites using Lando",
+            "Collaborated in an Agile environment with Jira, Enspire, and Git",
+            "Programmed in PHP, Sass, and Twig"
+        ]
+    },
+    {
+        "id": 3,
+        "position": "Customer Representative",
+        "field": "Banking",
+        "companyName": "Scotiabank",
+        "companyWebsite": "https://www.scotiabank.com/",
+        "location": "London, ON",
+        "duration": "Nov 2020 to Present",
+        "bulletPoints": [
+        ]
+    }
+]
