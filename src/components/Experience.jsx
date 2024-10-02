@@ -14,7 +14,6 @@ function Experience({ experience }) {
 
     return (
         <div className="experience">
-            <hr/>
             <h1>{experience.position}</h1>
             <h2>{experience.field}</h2>
             <a href={experience.companyWebsite}><h1>{experience.companyName}</h1></a>
@@ -27,7 +26,6 @@ function Experience({ experience }) {
                 </ListItem>
                 ))}
             </List>
-            <hr/>
         </div>
     );
 }
