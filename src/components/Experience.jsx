@@ -22,7 +22,7 @@ function Experience({ experience }) {
             </div>
             <div className="experiencePosLoc">
                 <a href={experience.companyWebsite}>
-                    <img className="experienceCompanyLogo" src={`${baseURL}/icons/${experience.companyLogo}`} alt="Company Logo" />
+                    <img className="experienceCompanyLogo" src={`${baseURL}icons/${experience.companyLogo}`} alt="Company Logo" />
                 </a>
                 <h1>{experience.duration}</h1>
             </div>

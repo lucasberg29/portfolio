@@ -19,7 +19,7 @@ function Education({ education }) {
 
             <div className="educationCourseLocation">
                 <a href={education.institutionWebsite}>
-                    <img className="educationInstitutionLogo" src={`${baseURL}/icons/${education.institutionLogo}`} alt="Company Logo" />
+                    <img className="educationInstitutionLogo" src={`${baseURL}icons/${education.institutionLogo}`} alt="Company Logo" />
                 </a>
                 <h1>{education.startDate} to {education.endDate}</h1>
             </div>
