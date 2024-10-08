@@ -11,12 +11,17 @@ function Education({ education }) {
 
     return (
         <div className="education">
-            <h1>{education.courseName}</h1>
-            <a href={education.institutionWebsite}>
-                <h1>{education.institution}</h1></a>
-            <h1>{education.location}</h1>
-            <h1>{education.startDate}</h1>
-            <h1>{education.endDate}</h1>
+            <div className="educationCourseLocation">
+                <h1 className="educationCourseName">{education.courseName}</h1>
+                <h1 className="educationLocation">{education.location}</h1>
+            </div>
+
+            <div className="educationCourseLocation">
+                <a href={education.institutionWebsite}>
+                    <img className="educationInstitutionLogo" src={`/icons/${education.institutionLogo}`} alt="Company Logo" />
+                </a>
+                <h1>{education.startDate} to {education.endDate}</h1>
+            </div>
             <List>
                 {education.bulletPoints.map((bulletPoint, index) => (
                 <ListItem key={index}>

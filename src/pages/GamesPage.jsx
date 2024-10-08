@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import unityLogo from '../assets/icons/unity_logo.png';
+import { Grid } from '@mui/material';
 
 import { Navigation, Pagination } from 'swiper/modules';  // Import Navigation and Pagination modules
 
@@ -63,36 +65,28 @@ function GamesPage({ setSelectedPage }) {
 
     return (
         <div className="gamesPage">
-            <h1>Games Page</h1>
-            <div className="unityGamesSection">
-            <h1>Unity Games</h1>
-                <Swiper
-                    slidesPerView={4}
-                    slidesPerGroup={1}
-                    navigation={true}
-                    loop
-                    pagination={{ clickable: true }}
-                    modules={[Navigation, Pagination]}  // Make sure to include the necessary modules
-                >
+            <div className="unityGamesGrid">
+            <img className="unityLogo" src={unityLogo} alt="Unity logo image" />
+            <Grid container spacing={2}>
                 {games.map(game => (
-                    <SwiperSlide key={game.id}>
-                        <div className="gameCard">
-                            <h1>{game.name}</h1>
-                            <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
-                                <img
+                <Grid item xs={3}>
+                    <div className="gameCard">
+                        <h1>{game.name}</h1>
+                        <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
+                            <img
                                     src={`${baseURL}games/${game.projectName}/art/gameCover.png`}
                                     className="gameCover"
                                     alt="Overlay"
-                                />
-                            </a>
-                            <h2 className="gameDescription">{game.description}</h2>
+                            />
+                        </a>
+                        <h2 className="gameDescription">{game.description}</h2>
                             <hr />
                         </div>
-                    </SwiperSlide>
+                </Grid>
                 ))}
-                </Swiper>
+            </Grid>
             </div>
-            <hr />
+
             {games.map((game) =>
                 game.isRunning ? (
                     <UnityGame key={game.id} gameName={game.projectName} game={game} />

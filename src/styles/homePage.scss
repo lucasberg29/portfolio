@@ -5,18 +5,59 @@
 
 .experience{
     border-color: teal;
-    border-width: 3px;
+    border-width: 1px;
     border-radius: 10px;
     padding: 10px;
     margin-right: 20px;
     margin-bottom: 10px;
 }
 
+.experiencePosition{
+    font-weight: bold;
+}
+
+.experienceLocation{
+    font-weight: bold;
+}
+
+.experiencePosLoc{
+    display:flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.experienceCompanyName{
+    font-style: italic;
+    width: 60px !important;
+}
+
+.experienceCompanyLogo{
+    width: 120px;
+}
+
 .education{
     border-color: teal;
-    border-width: 3px;
+    border-width: 1px;
     border-radius: 10px;
     padding: 10px;
     margin-right: 20px;
     margin-bottom: 10px;
+}
+
+.educationCourseName{
+    font-weight: bold;
+}
+
+.educationInstitutionLogo{
+    width: 120px;
+}
+
+.educationLocation{
+    font-weight: bold;
+}
+
+.educationCourseLocation{
+    display:flex;
+    justify-content: space-between; 
+    align-items: center;
 }

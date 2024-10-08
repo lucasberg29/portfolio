@@ -12,13 +12,13 @@ function HomePage({setSelectedPage, currentPage}) {
   return(
     <div className="homePage">
       <div className="sectionTitle">Experience</div>
-        {experienceData.map(experience => (
-                    <Experience experience={experience}>
+        {experienceData.map((experience, id) => (
+                    <Experience key={id} experience={experience}>
                     </Experience>
                 ))}
       <div className="sectionTitle">Education</div>
-      {educationData.map(education => (
-                    <Education education={education}>
+      {educationData.map((education, id) => (
+                    <Education key={id} education={education}>
                     </Education>
                 ))}
       <div className="sectionTitle">Skills</div>

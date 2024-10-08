@@ -76,6 +76,7 @@ $gameWidth: 1600px;
     position: relative;
     width: 100%;
     height: calc(witdh);
+    border-radius: 10px;
 }
 
 .close-button {
@@ -88,8 +89,20 @@ $gameWidth: 1600px;
     cursor: pointer;
 }
 
+.unityGamesGrid{
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.unityLogo{
+    width: 150px;
+    padding-left: 10px;
+}
+
 .gameCoverClick{
     cursor: pointer;
+    border-radius: 100px;
 }
 
 .closeGameIcon{

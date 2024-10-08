@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import itchIcon from '../assets/itch-io-svgrepo-com.svg';
+import itchIcon from '../assets/icons/itch-io-svgrepo-com.svg';
 
 function Navigation ({ onNavigate, currentPage }) {
     const [isNavigationExpanded, setIsNavigationExpanded] = useState(false);

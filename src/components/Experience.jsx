@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import experienceData from '../data/experience.json';
-
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
-function Experience({ experience }) {
-    const [currentGameProvider, setCurrentGameProvider] = useState("");
 
+
+function Experience({ experience }) {
     useEffect(() => {
 
     }, []);
 
     return (
         <div className="experience">
-            <h1>{experience.position}</h1>
-            <h2>{experience.field}</h2>
-            <a href={experience.companyWebsite}><h1>{experience.companyName}</h1></a>
-            <h1>{experience.location}</h1>
-            <h1>{experience.duration}</h1>
+            <div className="experiencePosLoc">
+                <div className="experiencePosition">{experience.position}</div>
+                <div className="experienceLocation">{experience.location}</div>
+            </div>
+            <div className="experiencePosLoc">
+                <a href={experience.companyWebsite}>
+                    <img className="experienceCompanyLogo" src={`/icons/${experience.companyLogo}`} alt="Company Logo" />
+                </a>
+                <h1>{experience.duration}</h1>
+            </div>
             <List>
                 {experience.bulletPoints.map((bulletPoint, index) => (
                 <ListItem key={index}>

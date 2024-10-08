@@ -5,6 +5,7 @@
         "field": "Software Development",
         "companyName": "Buckland",
         "companyWebsite": "https://www.buckland.com/",
+        "companyLogo": "buckland_logo.png",
         "location": "St. Thomas, ON",
         "duration": "May 2023 to Sep 2023 and May 2024 to Sep 2024",
         "bulletPoints": [
@@ -19,6 +20,7 @@
         "field": "Software Development",
         "companyName": "Northern Commerce",
         "companyWebsite": "https://www.northern.co/",
+        "companyLogo": "northern_logo.png",
         "location": "London, ON",
         "duration": "Sep 2022 to Dec 2022",
         "bulletPoints": [
@@ -33,6 +35,7 @@
         "field": "Banking",
         "companyName": "Scotiabank",
         "companyWebsite": "https://www.scotiabank.com/",
+        "companyLogo": "scotiabank_logo.png",
         "location": "London, ON",
         "duration": "Nov 2020 to Present",
         "bulletPoints": [
