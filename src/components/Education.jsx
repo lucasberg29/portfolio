@@ -4,6 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
 function Education({ education }) {
+    const baseURL = import.meta.env.VITE_BASE_URL;
 
     useEffect(() => {
 
@@ -18,7 +19,7 @@ function Education({ education }) {
 
             <div className="educationCourseLocation">
                 <a href={education.institutionWebsite}>
-                    <img className="educationInstitutionLogo" src={`/icons/${education.institutionLogo}`} alt="Company Logo" />
+                    <img className="educationInstitutionLogo" src={`${baseURL}/icons/${education.institutionLogo}`} alt="Company Logo" />
                 </a>
                 <h1>{education.startDate} to {education.endDate}</h1>
             </div>
