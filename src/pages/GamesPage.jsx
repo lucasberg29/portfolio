@@ -67,9 +67,9 @@ function GamesPage({ setSelectedPage }) {
         <div className="gamesPage">
             <div className="unityGamesGrid">
             <img className="unityLogo" src={unityLogo} alt="Unity logo image" />
-            <Grid container spacing={2}>
-                {games.map(game => (
-                <Grid item xs={3}>
+            <Grid container spacing={5}>
+                {games.map((game,id) => (
+                <Grid key={id} item xs={12} sm={6} md={3} className="gameGridItem">
                     <div className="gameCard">
                         <h1>{game.name}</h1>
                         <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
@@ -79,7 +79,12 @@ function GamesPage({ setSelectedPage }) {
                                     alt="Overlay"
                             />
                         </a>
-                        <h2 className="gameDescription">{game.description}</h2>
+                        <div className="gameTags">
+                            <a href={game.gameRepo} >
+                                <div className="gameTag githubTag">Github</div>
+                            </a>
+                        </div>
+                        <div className="gameDescription">{game.description}</div>
                             <hr />
                         </div>
                 </Grid>

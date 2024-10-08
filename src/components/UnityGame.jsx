@@ -29,8 +29,6 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
     }, []); 
     
     function startGame() {
-        //setCurrentGame(game);
-        //setCurrentGameProvider(unityProvider);
         setIsModalOpen(true);
         sendMessage("_ReactController", "ResumeGame");
     }
@@ -49,16 +47,6 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
 
     return (  
         <div>
-            {/* <h1>{gameTitle}</h1>
-            <a onClick={startGame(game, unityProvider, sendMessage)} className="gameCoverClick">
-                <img
-                    src={`${baseURL}games/${game.projectName}/art/gameCover.png`} // Update the image URL
-                    className="gameCover"
-                    alt="Overlay"
-                />
-            </a>
-            <h2 className="gameDescription">{game.description}</h2>
-            <hr/> */}
             <Modal className="gameModal" show={isModalOpen} onClose={closeModal}>
                 <div className="gameModelHeader">
                     <h2 className="gameModelHeaderName">{game.name}</h2>
