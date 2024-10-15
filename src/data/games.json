@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "name": "MiniGolf",
+    "name": "Mini Golf",
     "projectName": "miniGolf",
     "gameRepo": "https://github.com/lucasberg29/unity-mini_golf",
     "description": "Mini golf using Unity physics",

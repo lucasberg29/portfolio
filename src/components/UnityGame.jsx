@@ -62,8 +62,8 @@ const Modal = ({ show, onClose, children }) => {
     if (!show) return null;
 
     return (
-        <div className="modal-overlay modalHeader" onClick={onClose}>
-            <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <div className="modalOverlay modalHeader" onClick={onClose}>
+            <div className="modalContent" onClick={e => e.stopPropagation()}>
                 {children}
             </div>
         </div>

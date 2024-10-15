@@ -1,5 +1,6 @@
-$gameWidth: 1600px;
+$gameWidth: 1280px;
 $githubcolor: #4829ff;
+$gameModelHeaderHeight: 40px;
 
 .unityGame{
     width: 100%;
@@ -7,7 +8,7 @@ $githubcolor: #4829ff;
     border: none;
 }
 
-.modal-overlay {
+.modalOverlay {
     position: fixed; 
     top: 0;
     left: 0;
@@ -20,10 +21,9 @@ $githubcolor: #4829ff;
     align-items: center;
 }
 
-.modal-content {
-    max-width: 1600px;
+.modalContent {
     width: $gameWidth;
-    height: calc(gameWidth * (1080px / 1920px)); 
+    height: calc(($gameWidth * (1080px / 1920px)) + $gameModelHeaderHeight); 
     background-color: white;
     position: relative;
     display: flex;
@@ -34,7 +34,7 @@ $githubcolor: #4829ff;
 }
 
 .gameModelHeader{
-    height: 40px;
+    height: $gameModelHeaderHeight;
     width: 100%;
 }
 
