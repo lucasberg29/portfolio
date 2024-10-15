@@ -17,15 +17,15 @@ function Experience({ experience }) {
     return (
         <div className="experience">
             <div className="experiencePosLoc">
-                <div className="experiencePosition">{experience.position}</div>
-                <div className="experienceLocation">{experience.location}</div>
-            </div>
-            <div className="experiencePosLoc">
                 <a href={experience.companyWebsite}>
                     <img className="experienceCompanyLogo" src={`${baseURL}icons/${experience.companyLogo}`} alt="Company Logo" />
                 </a>
-                <h1>{experience.duration}</h1>
+                <div className="experienceLocation">{experience.location}</div>
             </div>
+            <div className="experiencePosLoc">
+                <div className="experiencePosition">{experience.position}</div>
+            </div>
+            <div className="duration">{experience.duration}</div>
             <List>
                 {experience.bulletPoints.map((bulletPoint, index) => (
                 <ListItem key={index}>

@@ -7,7 +7,8 @@ function AboutMePage({setSelectedPage}) {
 
     return(
     <div className="aboutPage">
-        <h1>About Me</h1>
+        <div className="salutation">Hello!</div>
+        <div className="presentation">I'm Lucas Berg, a passionate software developer who loves to design and develop games and interactive applications.</div>
     </div>
     );
 }
