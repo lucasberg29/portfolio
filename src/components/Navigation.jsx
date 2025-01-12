@@ -30,7 +30,7 @@ function Navigation ({ onNavigate, currentPage }) {
                             </div>
                             <NavLink className={`navLink ${isNavCurrentPage('home') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('home')} to={`home`}>Home</NavLink>
                             <NavLink className={`navLink ${isNavCurrentPage('games') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('games')} to={`games`}>Games</NavLink>
-                            <NavLink className={`navLink ${isNavCurrentPage('about') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('about')} to={`about`}>About</NavLink>
+                            {/* <NavLink className={`navLink ${isNavCurrentPage('about') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('about')} to={`about`}>About</NavLink> */}
                             <NavLink className={`navLink ${isNavCurrentPage('contact') ? 'activeNavLink' : ''}`} onClick={() => onNavigate('contact')} to={`contact`}>Contact</NavLink>
                         </div>
                         <div className='navLinkRight'>

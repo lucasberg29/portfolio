@@ -14,6 +14,10 @@
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+.introduction{
+    min-height: 100vh;
+}
+
 .experience{
     @include customSection;
 
@@ -61,6 +65,7 @@
 
 .educationLocation{
     font-weight: bold;
+    padding-right: 20px;
 }
 
 .educationCourseLocation{

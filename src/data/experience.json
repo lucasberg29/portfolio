@@ -9,9 +9,9 @@
         "location": "St. Thomas, ON",
         "duration": "May 2023 to Sep 2023 and May 2024 to Sep 2024",
         "bulletPoints": [
-            "Developed full-stack web applications with Blazor",
-            "Programmed in C#, MySQL, JavaScript, and Sass",
-            "Implemented responsive web pages following UX/UI best practices"
+            "Developed web applications using Blazor and Knockout.js",
+            "Programed in C#, MySQL, Javascript, and Sass",
+            "Implemented responsive web pages using UX/UI best practices"
         ]
     },
     {
@@ -27,18 +27,6 @@
             "Developed and maintained Drupal websites using Lando",
             "Collaborated in an Agile environment with Jira, Enspire, and Git",
             "Programmed in PHP, Sass, and Twig"
-        ]
-    },
-    {
-        "id": 3,
-        "position": "Customer Representative",
-        "field": "Banking",
-        "companyName": "Scotiabank",
-        "companyWebsite": "https://www.scotiabank.com/",
-        "companyLogo": "scotiabank_logo.png",
-        "location": "London, ON",
-        "duration": "Nov 2020 to Present",
-        "bulletPoints": [
         ]
     }
 ]

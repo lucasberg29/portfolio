@@ -1,6 +1,20 @@
 @mixin pageSpacing{
     margin-left: 20px;
     margin-top: 20px;
+    width: 80%;
+}
+
+.siteWrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.siteBodyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 .homePage{
@@ -17,4 +31,10 @@
 
 .contactPage{
     @include pageSpacing;
+}
+
+.sitefooter{
+    background-color: teal;
+    min-height: 80px;
+    margin-top: 30px;
 }

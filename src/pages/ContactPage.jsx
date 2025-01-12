@@ -8,7 +8,6 @@ function ContactPage({setSelectedPage}) {
 
     return(
     <div className="contactPage">
-        <h1>Contact</h1>
         <ContactForm></ContactForm>
     </div>
     );

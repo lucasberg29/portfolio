@@ -1,0 +1,20 @@
+[
+    {
+      "id": "1",
+      "name": "languages",
+      "bulletPoints" : [
+            {
+                "id": "1",
+                "name" : "Portuguese",
+                "level" : "Native speaker",
+                "short" : "pt-br"
+            },            
+            {
+                "id": "2",
+                "name" : "English",
+                "level" : "Fluent",
+                "short" : "en"
+            }
+        ]
+    }
+  ]
