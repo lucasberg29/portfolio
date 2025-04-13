@@ -1,0 +1,11 @@
+[
+    {
+      "id": "1",
+      "name": "Galaga 1981",
+      "projectName": "galaga1981",
+      "gameRepo": "https://github.com/lucasberg-gdp/patterns_project_1",
+      "itchPage": "https://lucasberg29.itch.io/galaga-1981",
+      "description": "Remake for Galaga 1981",
+      "version": "1.0.0"
+    }
+  ]

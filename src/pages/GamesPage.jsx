@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import UnityGame from "../components/UnityGame.jsx";
 import gamesData from '../data/games.json';
+import openGlData from '../data/openGlGames.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import unityLogo from '../assets/icons/unity_logo.png';
+import opengGlLogo from '../assets/icons/openGl_cpp_logo.png';
 import { Grid } from '@mui/material';
 
-import { Navigation, Pagination } from 'swiper/modules';  // Import Navigation and Pagination modules
+import { Navigation, Pagination } from 'swiper/modules';
 
 function GamesPage({ setSelectedPage }) {
     const baseURL = import.meta.env.VITE_BASE_URL;
@@ -17,7 +19,7 @@ function GamesPage({ setSelectedPage }) {
     const [currentGame, setCurrentGame] = useState("");
     const [currentGameProvider, setCurrentGameProvider] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [currentSendMessage, setCurrentSendMessage] = useState(null);  // Add this line
+    const [currentSendMessage, setCurrentSendMessage] = useState(null);
 
     const openModal = () => setIsModalOpen(true);
 
@@ -36,7 +38,7 @@ function GamesPage({ setSelectedPage }) {
     function startGame(game, unityProvider, sendMessage) {
         setCurrentGame(game);
         setCurrentGameProvider(unityProvider);
-        setCurrentSendMessage(sendMessage); // Ensure sendMessage is properly passed
+        setCurrentSendMessage(sendMessage);
         openModal();
         if (currentSendMessage) {
             currentSendMessage("_ReactController", "ResumeGame");
@@ -66,37 +68,62 @@ function GamesPage({ setSelectedPage }) {
     return (
         <div className="gamesPage">
             <div className="unityGamesGrid">
-            <img className="unityLogo" src={unityLogo} alt="Unity logo image" />
-            <Grid container spacing={5}>
-                {games.map((game,id) => (
-                <Grid key={id} item xs={12} sm={6} md={3} className="gameGridItem">
-                    <div className="gameCard">
-                        <h1>{game.name}</h1>
-                        <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
+                <img className="unityLogo" src={unityLogo} alt="Unity logo image" />
+                <Grid container spacing={5}>
+                    {games.map((game,id) => (
+                    <Grid key={id} item xs={12} sm={6} md={3} className="gameGridItem">
+                        <div className="gameCard">
+                            <h1>{game.name}</h1>
+                            <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
                             <img
                                     src={`${baseURL}games/${game.projectName}/art/gameCover.png`}
                                     className="gameCover"
                                     alt="Overlay"
                             />
-                        </a>
-                        <div className="gameTags">
-                            <a href={game.gameRepo} >
-                                <div className="gameTag githubTag">Github</div>
                             </a>
-                        </div>
-                        <div className="gameDescription">{game.description}</div>
+                            <div className="gameTags">
+                                <a href={game.gameRepo} >
+                                    <div className="gameTag githubTag">Github</div>
+                                </a>
+                            </div>
+                            <div className="gameDescription">{game.description}</div>
                             <hr />
                         </div>
+                    </Grid>
+                    ))}
                 </Grid>
-                ))}
-            </Grid>
             </div>
-
             {games.map((game) =>
                 game.isRunning ? (
                     <UnityGame key={game.id} gameName={game.projectName} game={game} />
                 ) : null
             )}
+            <div className="openGlGamesGrid">
+                <img className="openGlLogo" src={opengGlLogo} alt="OpenGL/C++ image" />
+                <Grid container spacing={5}>
+                    {openGlData.map((game,id) => (
+                        <Grid key={id} item xs={12} sm={6} md={3} className="gameGridItem">
+                            <div className="gameCard">
+                                <h1>{game.name}</h1>
+                                <a href="https://lucasberg29.itch.io/galaga-1981" className="gameCoverClick">
+                                    <img
+                                    src={`${baseURL}openglgames/${game.projectName}/art/gameCover.png`}
+                                    className="gameCover"
+                                    alt="Overlay"
+                                    />
+                                </a>
+                                <div className="gameTags">
+                                    <a href={game.gameRepo} >
+                                    <div className="gameTag githubTag">Github</div>
+                                    </a>
+                                </div>
+                                <div className="gameDescription">{game.description}</div>
+                                <hr />
+                            </div>
+                        </Grid>
+                    ))}
+                </Grid>
+            </div>
         </div>
     );
 }
