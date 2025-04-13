@@ -68,17 +68,16 @@ $primaryColor: #4fd1c5;
 }
 
 .mobileNav {
-  width: 0;
+  width: 100%;
   height: 0;
   color: black;
-  transition: width 0.5s ease, height 0.8s ease, background-color 0.1s ease;
-  overflow: hidden; 
+  transition:  height 0.8s, background-color 0.8s;
+  overflow: hidden;
 }
 
 .expandedNav {
   background-color: $primaryColor;
-  width: 100%;
-  height: 100%;
+  height: 98px;
 }
 
 .navExpandedLink{
