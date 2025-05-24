@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
-import Button from '@mui/material/Button';
 import { stringUtils } from '../tools/utils';
-import { Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
@@ -13,7 +11,7 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const {unityProvider, sendMessage, isLoaded, loadingProgression, error} = useUnityContext({
+    const {unityProvider, sendMessage, isLoaded, loadingProgression, error, unload} = useUnityContext({
         loaderUrl:      gamePath + "WebGL.loader.js",
         dataUrl:        gamePath + "WebGL.data",
         frameworkUrl:   gamePath + "WebGL.framework.js",
@@ -37,12 +35,19 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
         sendMessage("_ReactController", "RestartGame");
     }
 
-    const closeModal = () => {
+    const closeModal = async () => {
         console.log("closing modal!");
         setIsModalOpen(false);
         restartGame();
         pauseGame();
-        game.isRunning = false;
+
+        try {
+            await unload();
+            console.log("Unity instance successfully unloaded.");
+        } catch (error) {
+            console.error("Error unloading Unity:", error);
+        }
+            game.isRunning = false;
     }
 
     return (  

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import UnityGame from "../components/UnityGame.jsx";
 import gamesData from '../data/games.json';
 import openGlData from '../data/openGlGames.json';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -10,52 +9,15 @@ import unityLogo from '../assets/icons/unity_logo.png';
 import opengGlLogo from '../assets/icons/openGl_cpp_logo.png';
 import { Grid } from '@mui/material';
 
-import { Navigation, Pagination } from 'swiper/modules';
-
 function GamesPage({ setSelectedPage }) {
     const baseURL = import.meta.env.VITE_BASE_URL;
-
+    
     const [games, setGames] = useState([]);
-    const [currentGame, setCurrentGame] = useState("");
-    const [currentGameProvider, setCurrentGameProvider] = useState("");
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [currentSendMessage, setCurrentSendMessage] = useState(null);
-
-    const openModal = () => setIsModalOpen(true);
-
-    const closeModal = () => {
-        console.log("closing modal!");
-        setIsModalOpen(false);
-        restartGame();
-        pauseGame();
-    }
 
     useEffect(() => {
         setSelectedPage('games');
         setGames(gamesData);
     }, []);
-
-    function startGame(game, unityProvider, sendMessage) {
-        setCurrentGame(game);
-        setCurrentGameProvider(unityProvider);
-        setCurrentSendMessage(sendMessage);
-        openModal();
-        if (currentSendMessage) {
-            currentSendMessage("_ReactController", "ResumeGame");
-        }
-    }
-
-    function pauseGame() {
-        if (currentSendMessage) {
-            currentSendMessage("_ReactController", "PauseGame");
-        }
-    }
-
-    function restartGame() {
-        if (currentSendMessage) {
-            currentSendMessage("_ReactController", "RestartGame");
-        }
-    }
 
     function handleGameClick(gameId) {
         setGames((prevGames) =>

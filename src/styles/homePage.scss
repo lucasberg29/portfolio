@@ -15,7 +15,7 @@
 }
 
 .introduction{
-    min-height: 90vh;
+    min-height: 40vh;
 }
 
 .experience{
@@ -72,4 +72,8 @@
     display:flex;
     justify-content: space-between; 
     align-items: center;
+}
+
+.skillSection{
+    margin-top: 20px;
 }
