@@ -1,11 +1,7 @@
-import React, { useState } from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
-import { Routes, Route, Navigate  } from 'react-router-dom';
+import { useState } from "react";
 import HomePage from './pages/HomePage.jsx';
 import GamesPage from './pages/GamesPage.jsx';
-import AboutMePage from './pages/AboutMePage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
-import NotFound from './components/NotFound.jsx';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
 import './styles/site.scss';
@@ -21,21 +17,29 @@ function App() {
     setSelectedPage(path);
   };
 
+  const renderPage = () => {
+    switch (selectedPage) {
+      case 'home':
+        return <HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />;
+      case 'games':
+        return <GamesPage setSelectedPage={setSelectedPage} />;
+      case 'contact':
+        return <ContactPage setSelectedPage={setSelectedPage} />;
+      default:
+        return <HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />;
+    }
+  };
+
   return (
-      <div className="siteWrapper">
-        <Navigation currentPage={selectedPage} onNavigate={handleNavigation} className="navigation"/>
-        <div className="siteBodyContainer">
-          <Routes className="siteBody">
-            <Route path= {`/`} element={<HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />} />
-            <Route path= {`home`} element={<HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />} />
-            <Route path= {`games`} element={<GamesPage setSelectedPage={setSelectedPage} />} />
-            {/* <Route path= {`about`} element={<AboutMePage setSelectedPage={setSelectedPage} />} /> */}
-            <Route path= {`contact`} element={<ContactPage setSelectedPage={setSelectedPage} />} />
-            <Route path= {`*`} element={<HomePage currentPage={selectedPage} setSelectedPage={setSelectedPage} />} />
-          </Routes>
+    <div className="siteWrapper">
+      <Navigation currentPage={selectedPage} onNavigate={setSelectedPage} className="navigation" />
+      <div className="siteBodyContainer">
+        <div className="siteBody">
+          {renderPage()}
         </div>
-        <Footer/>
       </div>
+      <Footer />
+    </div>
   );
 }
 
