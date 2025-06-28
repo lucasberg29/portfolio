@@ -42,9 +42,9 @@ function ContactForm() {
    };
 
    return (
-      <Box sx={{ maxWidth: 600, mx: 'auto', p: 2, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
+      <Box sx={{ maxWidth: 600, mx: 'auto', p: 1, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
          <Typography variant="h4" component="h1" gutterBottom>
-            Contact Me
+            Contact
          </Typography>
          <form onSubmit={handleSubmit}>
             <TextField fullWidth label="Name"value={name}

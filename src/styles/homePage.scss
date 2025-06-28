@@ -77,3 +77,18 @@
 .skillSection{
     margin-top: 20px;
 }
+
+@media (max-width: 1024px) {
+  .sectionTitle{
+    width: 100%;
+    justify-content: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .skillSection{
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+}

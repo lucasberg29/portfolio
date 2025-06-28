@@ -7,3 +7,17 @@
     font-size: 1.5rem;
     width: 60%;
 }
+
+@media (max-width: 1024px) {
+  .presentation{
+    width: 100%;
+    justify-content: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .salutation{
+    margin-left: 10px;
+  }
+}
+
