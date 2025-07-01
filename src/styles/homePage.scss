@@ -2,6 +2,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 @mixin customSection {
@@ -15,7 +16,9 @@
 }
 
 .introduction{
-    min-height: 40vh;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .experience{
@@ -76,6 +79,7 @@
 
 .skillSection{
     margin-top: 20px;
+    width: 100%;
 }
 
 @media (max-width: 1024px) {
