@@ -42,7 +42,7 @@ function HomePage({setSelectedPage, currentPage}) {
                             <h1>{game.name}</h1>
                             <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
                             <img
-                                    src={`${baseURL}games/${game.projectName}/art/gameCover.png`}
+                                    src={`${baseURL}/games/${game.projectName}/art/gameCover.png`}
                                     className="gameCover"
                                     alt="Overlay"
                             />
@@ -73,7 +73,7 @@ function HomePage({setSelectedPage, currentPage}) {
                                 <h1>{game.name}</h1>
                                 <a href="https://lucasberg29.itch.io/galaga-1981" className="gameCoverClick">
                                     <img
-                                    src={`${baseURL}openglgames/${game.projectName}/art/gameCover.png`}
+                                    src={`${baseURL}/openglgames/${game.projectName}/art/gameCover.png`}
                                     className="gameCover"
                                     alt="Overlay"
                                     />

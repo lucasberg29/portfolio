@@ -38,7 +38,7 @@ function GamesPage({ setSelectedPage }) {
                             <h1>{game.name}</h1>
                             <a onClick={() => handleGameClick(game.id)} className="gameCoverClick">
                             <img
-                                    src={`${baseURL}games/${game.projectName}/art/gameCover.png`}
+                                    src={`${baseURL}/games/${game.projectName}/art/gameCover.png`}
                                     className="gameCover"
                                     alt="Overlay"
                             />

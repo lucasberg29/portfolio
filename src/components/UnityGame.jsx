@@ -7,7 +7,7 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
 
     const gameTitle = stringUtils.ConvertCamelCaseToTitleCase(gameName);
     const baseURL = import.meta.env.VITE_BASE_URL;
-    const gamePath = `${baseURL}games/${gameName}/Build/`;
+    const gamePath = `${baseURL}/games/${gameName}/Build/`;
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
