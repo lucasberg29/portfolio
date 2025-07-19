@@ -6,6 +6,7 @@ function Footer () {
 
     return (
         <div className='sitefooter' style={{width: "100%"}}>
+            <p id="siteSignature">© 2025 Lucas Berg</p>
         </div>
     );
 };
