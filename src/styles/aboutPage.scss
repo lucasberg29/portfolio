@@ -1,24 +1,56 @@
-.salutation{
-    font-size: 3.0rem;
-    min-height: 100px;
-    padding-top: 50px;  
+.salutation {
+  font-size: 3rem;
+  min-height: 100px;
+  padding-top: 50px;
 }
 
-.presentation{
-    font-size: 1.5rem;
-    width: 60%;
+.presentation {
+  font-size: 1.5rem;
+  width: 60%;
+}
+
+#nameAndEmailContactForm {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+}
+
+.customInputField {
+  margin-bottom: 100px;
+
+  .MuiOutlinedInput-root {
+    border-radius: 24px;
+
+    fieldset {
+      border-radius: 24px;
+    }
+  }
+
+  .MuiInputBase-input {
+    font-family: monospace, "Varela Round", sans-serif;
+    font-size: 16px;
+  }
+}
+
+.customButton {
+  .MuiOutlinedInput-root {
+    border-radius: 24px;
+
+    fieldset {
+      border-radius: 24px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
-  .presentation{
+  .presentation {
     width: 100%;
     justify-content: left;
     margin-left: 10px;
     margin-right: 10px;
-  } 
+  }
 
-  .salutation{
+  .salutation {
     margin-left: 10px;
   }
 }
-

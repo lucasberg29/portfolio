@@ -1,104 +1,108 @@
-.sectionTitle{
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-    width: 100%;
+.sectionTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+#contactFormSalutation {
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 @mixin customSection {
-    border-width: 1px;
-    border-radius: 10px;
-    border-top-width: 0px;
-    padding: 10px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-width: 1px;
+  border-radius: 10px;
+  border-top-width: 0px;
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.introduction{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+.introduction {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.experience{
-    @include customSection;
+.experience {
+  @include customSection;
 
-    .duration{
-        font-style: italic;
-        font-size: 0.8rem;
-    }
-}
-
-.experiencePosition{
-    font-weight: bold;
-}
-
-.experienceLocation{
-    font-weight: bold;
-    padding-right: 20px;
-}
-
-.experiencePosLoc{
-    display:flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-.experienceCompanyName{
+  .duration {
     font-style: italic;
-    width: 60px !important;
+    font-size: 0.8rem;
+  }
 }
 
-.experienceCompanyLogo{
-    width: 120px;
+.experiencePosition {
+  font-weight: bold;
 }
 
-.education{
-    @include customSection;
+.experienceLocation {
+  font-weight: bold;
+  padding-right: 20px;
 }
 
-.educationCourseName{
-    font-weight: bold;
+.experiencePosLoc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.educationInstitutionLogo{
-    width: 120px;
+.experienceCompanyName {
+  font-style: italic;
+  width: 60px !important;
 }
 
-.educationLocation{
-    font-weight: bold;
-    padding-right: 20px;
+.experienceCompanyLogo {
+  width: 120px;
 }
 
-.educationCourseLocation{
-    display:flex;
-    justify-content: space-between; 
-    align-items: center;
+.education {
+  @include customSection;
 }
 
-.skillSection{
-    margin-top: 20px;
-    width: 100%;
+.educationCourseName {
+  font-weight: bold;
 }
 
-#siteSignature{
-    width: 100%;
-    height: 100%;
-    margin-left: 20px;
+.educationInstitutionLogo {
+  width: 120px;
+}
+
+.educationLocation {
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.educationCourseLocation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillSection {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#siteSignature {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
 }
 
 @media (max-width: 1024px) {
-  .sectionTitle{
+  .sectionTitle {
     width: 100%;
     justify-content: left;
     margin-left: 10px;
     margin-right: 10px;
   }
 
-  .skillSection{
+  .skillSection {
     margin-left: 10px;
     margin-right: 10px;
-
   }
 }
