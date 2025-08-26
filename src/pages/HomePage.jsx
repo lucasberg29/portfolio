@@ -98,40 +98,41 @@ function HomePage({ setSelectedPage, currentPage }) {
           ))}
         </Grid>
       </div>
-
       <div className="sectionTitle">Skills</div>
-      <div className="skillSection">
-        <img
-          style={{
-            width: "32px",
-            height: "24px",
-            float: "left",
-            marginRight: "8px",
-          }}
-          src="https://flagcdn.com/w320/br.png"
-          alt="Brazil Flag"
-          width="32"
-          height="24"
-        />
-        <div>Native speaker</div>
+      <div className="skillSections">
+        <div className="skillSection">
+          <img
+            style={{
+              width: "32px",
+              height: "24px",
+              float: "left",
+              marginRight: "8px",
+            }}
+            src="https://flagcdn.com/w320/br.png"
+            alt="Brazil Flag"
+            width="32"
+            height="24"
+          />
+          <div>Native speaker</div>
+        </div>
+        <div className="skillSection">
+          <img
+            style={{
+              width: "32px",
+              height: "24px",
+              objectFit: "cover",
+              float: "left",
+              marginRight: "8px",
+            }}
+            src="https://flagcdn.com/w320/ca.png"
+            alt="Canada Flag"
+            width="32"
+            height="24"
+          />
+          <div>Fluent in English</div>
+        </div>
       </div>
-
-      <div className="skillSection">
-        <img
-          style={{
-            width: "32px",
-            height: "24px",
-            objectFit: "cover",
-            float: "left",
-            marginRight: "8px",
-          }}
-          src="https://flagcdn.com/w320/ca.png"
-          alt="Canada Flag"
-          width="32"
-          height="24"
-        />
-        <div>Fluent in English</div>
-      </div>
+      <div className="sectionTitle">Contact</div>
       <div id="contactFormSalutation">
         Send me an email if you have ideas for games or projects. I'm also open
         to job opportunities.

@@ -50,7 +50,7 @@ function ContactForm() {
   return (
     <div>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form className="contactForm" onSubmit={handleSubmit}>
           <div id="nameAndEmailContactForm">
             <TextField
               className="customInputField"

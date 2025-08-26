@@ -12,7 +12,10 @@
 #nameAndEmailContactForm {
   display: flex;
   flex: 1;
-  gap: 20px;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
 }
 
 .customInputField {
@@ -44,13 +47,19 @@
 
 @media (max-width: 1024px) {
   .presentation {
-    width: 100%;
+    width: 90%;
     justify-content: left;
     margin-left: 10px;
-    margin-right: 10px;
   }
 
   .salutation {
     margin-left: 10px;
+  }
+
+  .contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
