@@ -3,6 +3,13 @@
   font-size: 1.5rem;
   padding-bottom: 10px;
   width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#skills {
+  width: 100%;
+  margin-top: 20px;
 }
 
 #contactFormSalutation {
@@ -86,21 +93,47 @@
 
 .skillSections {
   display: flex;
-  flex-direction: column;
   width: 100%;
   align-items: flex-start;
   margin-bottom: 30px;
 }
 
+.skill {
+  padding: 5px;
+}
+
+.skillSectionTitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: start;
+}
+
 .skillSection {
   margin-top: 20px;
   width: 100%;
+  align-items: center;
 }
 
 #siteSignature {
   width: 100%;
   height: 100%;
   margin-left: 20px;
+}
+
+.gameTagsHomePage {
+  display: flex;
+}
+
+.unityLogoHomePage {
+  width: 64px;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.openGlLogoHomePage {
+  width: 64px;
+  height: 30px;
+  padding-top: 5px;
 }
 
 @media (max-width: 1024px) {

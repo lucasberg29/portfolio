@@ -4,174 +4,185 @@ $gameModelHeaderHeight: 40px;
 $openGlSiteColor: #575d63;
 
 @mixin customCard {
-    background-color: lightgray;
-    border-radius: 10px;
-    padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.openGlGamesGrid{
-    @include customCard;
-    padding-top: 50px;
-    background-color: $openGlSiteColor;
-    width: 100%;
-    margin-bottom: 20px;
+.openGlGamesGrid {
+  @include customCard;
+  padding-top: 50px;
+  background-color: $openGlSiteColor;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-
-.unityGame{
-    width: 100%;
-    height: 100%;
-    border: none;
+.unityGame {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .modalOverlay {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modalContent {
-    width: $gameWidth;
-    height: calc(($gameWidth * (1080px / 1920px)) + $gameModelHeaderHeight); 
-    background-color: white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 5px;
+  width: $gameWidth;
+  height: calc(($gameWidth * (1080px / 1920px)) + $gameModelHeaderHeight);
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.gameModelHeader{
-    height: $gameModelHeaderHeight;
-    width: 100%;
+.gameModelHeader {
+  height: $gameModelHeaderHeight;
+  width: 100%;
 }
 
-.gameModelHeaderName{
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 10px;
+.gameModelHeaderName {
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.gameCard{
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    margin: 10px 10px 10px 10px;
-    padding-right: 20px;
+.gameCard {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 10px 10px 10px 10px;
+  padding-right: 20px;
 }
 
-.swiper{
-    height: 350px;
-    border-left: 1px;
+.swiper {
+  height: 350px;
+  border-left: 1px;
 }
 
-.swiper-pagination{
-    margin-top: 1000px !important; 
+.swiper-pagination {
+  margin-top: 1000px !important;
 }
 
-.swiper-wrapper{
-    padding-left: 35px;
+.swiper-wrapper {
+  padding-left: 35px;
 }
 
 .unity-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .gameCover {
-    position: relative;
-    width: 100%;
-    height: calc(witdh);
-    border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: transparent;
-    font-size: 24px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.unityGamesGrid{
-    background-color: lightgray;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px 0px;
+.unityGamesGrid {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0px;
 }
 
-.unityLogo{
-    width: 150px;
-    padding-left: 10px;
+.unityLogo {
+  width: 150px;
+  padding-left: 10px;
 }
 
-.gameCoverClick{
-    cursor: pointer;
-    border-radius: 100px;
+.gameCoverClick {
+  cursor: pointer;
+  border-radius: 100px;
 }
 
-.closeGameIcon{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    float:right;
-    cursor: pointer;
-    z-index: 1100;
+.closeGameIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  float: right;
+  cursor: pointer;
+  z-index: 1100;
 }
 
-.gameTag{
-    font-size: 0.8rem;
-    text-align: center;
-    border-radius: 5px;
-    margin: 5px;
+.gameTag {
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
 }
 
-.githubTag{
-    background-color: $githubcolor;
-    font-weight: bold;
-    width:50px;
-    color: white;
+.githubTag {
+  background-color: $githubcolor;
+  font-weight: bold;
+  width: 50px;
+  color: white;
+}
+
+.gameTitleHomepage {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
 }
 
 // Media Queries
 @media (min-width: 500px) and (max-width: 2000px) {
-    .navLinkLeft {
-      .navLink{
-        display: block;
-      }
-  
-      .menuBurger{
-        display: none;
-      }
+  .navLinkLeft {
+    .navLink {
+      display: block;
     }
 
-    .gamesPage{
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 100%;
+    .menuBurger {
+      display: none;
     }
+  }
+
+  .gamesPage {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 499px) {
-
-    .gamesPage{
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 100%;
-    }
+  .gamesPage {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
 }

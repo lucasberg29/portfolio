@@ -6,6 +6,7 @@
     "gameRepo": "https://github.com/lucasberg29/unity-mini_golf",
     "description": "Mini golf using Unity physics",
     "version": "1.0.0",
+    "platform": "Unity",
     "isRunning": false
   },
   {
@@ -15,6 +16,7 @@
     "gameRepo": "https://github.com/lucasberg29/unity-flappy_duck",
     "description": "A flappy bird clone.",
     "version": "1.0.0",
+    "platform": "Unity",
     "isRunning": false
   },
   {
@@ -24,8 +26,9 @@
     "gameRepo": "https://github.com/lucasberg29/unity-human_parent",
     "description": "Take care of your human!",
     "version": "1.0.0",
+    "platform": "Unity",
     "isRunning": false
-  },    
+  },
   {
     "id": "4",
     "name": "Cannon",
@@ -33,6 +36,7 @@
     "gameRepo": "https://github.com/lucasberg29/unity-cannon",
     "description": "Fire!",
     "version": "1.0.0",
+    "platform": "Unity",
     "isRunning": false
   },
   {
@@ -40,8 +44,9 @@
     "name": "John Lemon",
     "projectName": "johnLemon",
     "gameRepo": "https://github.com/lucasberg29/unity-john_lemon",
-    "description": "Make your way through this haunted mansion!",
+    "description": "Explore the haunted mansion!",
     "version": "1.0.0",
+    "platform": "Unity",
     "isRunning": false
   }
 ]
