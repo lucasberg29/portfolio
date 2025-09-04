@@ -4,14 +4,23 @@ $primaryColor: #4fd1c5;
   width: 100%;
 }
 
+#resumeButton {
+  color: white;
+  border-color: violet;
+  background-color: blueviolet;
+  border-width: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
 .navLink {
   display: block;
   color: $primaryColor; // text-teal-200
   margin-right: 1rem;
-  text-decoration: none; 
+  text-decoration: none;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
 
   &:hover {
     color: white;
@@ -62,7 +71,7 @@ $primaryColor: #4fd1c5;
 }
 
 .navLinkLeft {
-  .navLink{
+  .navLink {
     display: none;
   }
 }
@@ -71,7 +80,7 @@ $primaryColor: #4fd1c5;
   width: 100%;
   height: 0;
   color: black;
-  transition:  height 0.8s, background-color 0.8s;
+  transition: height 0.8s, background-color 0.8s;
   overflow: hidden;
 }
 
@@ -80,33 +89,30 @@ $primaryColor: #4fd1c5;
   height: 72px;
 }
 
-.navExpandedLink{
+.navExpandedLink {
   display: block;
   color: black;
-  text-decoration: none; 
-  text-align: center; 
+  text-decoration: none;
+  text-align: center;
 
   &:hover {
     color: white;
   }
 }
 
-
-// Media Queries 
+// Media Queries
 @media (min-width: 500px) {
   .navLinkLeft {
-    .navLink{
+    .navLink {
       display: block;
     }
 
-    .menuBurger{
+    .menuBurger {
       display: none;
     }
   }
 
   .expandedNav {
-    display:none;
+    display: none;
   }
 }
-
-
