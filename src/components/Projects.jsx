@@ -48,18 +48,16 @@ function Projects() {
                   />
                 </a>
                 <div className="gameTagsHomePage">
-                  <a href={game.gameRepo}>
-                    <div className="gameTag">
-                      <a
-                        className="navLinkRightIcon"
-                        href={game.gameRepo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <GitHubIcon style={{ width: "24px", height: "24px" }} />
-                      </a>
-                    </div>
-                  </a>
+                  <div className="gameTag">
+                    <a
+                      className="navLinkRightIcon"
+                      href={game.gameRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GitHubIcon style={{ width: "24px", height: "24px" }} />
+                    </a>
+                  </div>
                   <img
                     className="unityLogoHomePage"
                     src={unityLogo}
@@ -86,18 +84,16 @@ function Projects() {
                   />
                 </a>
                 <div className="gameTagsHomePage">
-                  <a href={game.gameRepo}>
-                    <div className="gameTag">
-                      <a
-                        className="navLinkRightIcon"
-                        href={game.gameRepo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <GitHubIcon style={{ width: "24px", height: "24px" }} />
-                      </a>
-                    </div>
-                  </a>
+                  <div className="gameTag">
+                    <a
+                      className="navLinkRightIcon"
+                      href={game.gameRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GitHubIcon style={{ width: "24px", height: "24px" }} />
+                    </a>
+                  </div>
                   <img
                     className="openGlLogoHomePage"
                     src={opengGlLogo}
