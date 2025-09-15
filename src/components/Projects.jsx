@@ -50,19 +50,26 @@ function Projects() {
                 <div className="gameTagsHomePage">
                   <div className="gameTag">
                     <a
-                      className="navLinkRightIcon"
+                      className="customIcon githubIcon"
                       href={game.gameRepo}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <GitHubIcon style={{ width: "24px", height: "24px" }} />
+                      <GitHubIcon
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                        }}
+                      />
                     </a>
                   </div>
-                  <img
-                    className="unityLogoHomePage"
-                    src={unityLogo}
-                    alt="Unity logo image"
-                  />
+                  <div className="gameTag">
+                    <img
+                      className="unityLogoHomePage"
+                      src={unityLogo}
+                      alt="Unity logo image"
+                    />
+                  </div>
                 </div>
                 <div className="gameDescription">{game.description}</div>
                 <hr />
@@ -86,7 +93,7 @@ function Projects() {
                 <div className="gameTagsHomePage">
                   <div className="gameTag">
                     <a
-                      className="navLinkRightIcon"
+                      className="customIcon githubIcon"
                       href={game.gameRepo}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -94,11 +101,13 @@ function Projects() {
                       <GitHubIcon style={{ width: "24px", height: "24px" }} />
                     </a>
                   </div>
-                  <img
-                    className="openGlLogoHomePage"
-                    src={opengGlLogo}
-                    alt="OpenGL/C++ image"
-                  />
+                  <div className="gameTag">
+                    <img
+                      className="openGlLogoHomePage"
+                      src={opengGlLogo}
+                      alt="OpenGL/C++ image"
+                    />
+                  </div>
                 </div>
                 <div className="gameDescription">{game.description}</div>
                 <hr />

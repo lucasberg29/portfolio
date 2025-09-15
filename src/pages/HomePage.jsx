@@ -20,10 +20,10 @@ function HomePage({ setSelectedPage, currentPage }) {
 
   return (
     <div className="homePage">
-      <Introduction></Introduction>
-      <Projects></Projects>
-      <Skills></Skills>
-      <Contact></Contact>
+      <Introduction id="home"></Introduction>
+      <Projects id="projects"></Projects>
+      <Skills id="skills"></Skills>
+      <Contact id="contact"></Contact>
     </div>
   );
 }

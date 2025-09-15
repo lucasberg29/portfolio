@@ -1,4 +1,4 @@
-$primaryColor: #4fd1c5;
+$primaryColor: #4fd1c5; // text-teal-200
 
 .navigation {
   width: 100%;
@@ -13,9 +13,72 @@ $primaryColor: #4fd1c5;
   border-radius: 3px;
 }
 
+.navbar {
+  background-color: blue;
+}
+
+.navbarButtons {
+  display: flex;
+  align-items: center;
+}
+
+.customButton {
+  margin-top: 0;
+  padding: 6px 20px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  background-color: teal;
+  color: white;
+  border-radius: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  &:hover {
+    background-color: #008080;
+  }
+}
+
+.customIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border-radius: 6px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.githubIcon {
+  background-color: black;
+}
+
+.linkedinIcon {
+  background-color: rgb(25, 118, 210);
+}
+
+.itchLogoImage {
+  width: 20px;
+  height: 20px;
+}
+
+.itchCustomIcon {
+  background-color: rgba(255, 36, 74, 255);
+}
+
 .navLink {
   display: block;
-  color: $primaryColor; // text-teal-200
+  color: $primaryColor;
   margin-right: 1rem;
   text-decoration: none;
   justify-content: center;
@@ -53,8 +116,8 @@ $primaryColor: #4fd1c5;
 
 .navLinkRightIcon {
   align-items: center;
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
   margin-left: 5px;
   margin-right: 5px;
 }

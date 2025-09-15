@@ -122,6 +122,8 @@
 
 .gameTagsHomePage {
   display: flex;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .unityLogoHomePage {
@@ -131,9 +133,11 @@
 }
 
 .openGlLogoHomePage {
+  display: flex;
+  align-items: center;
+  vertical-align: center;
   width: 64px;
   height: 30px;
-  padding-top: 5px;
 }
 
 @media (max-width: 1024px) {

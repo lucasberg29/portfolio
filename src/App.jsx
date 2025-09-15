@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage.jsx";
 import GamesPage from "./pages/GamesPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import Navigation from "./components/Navigation.jsx";
+import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import "./styles/site.scss";
 import "./index.css";
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div className="siteWrapper">
+      <Navbar></Navbar>
       <Navigation
         currentPage={selectedPage}
         onNavigate={setSelectedPage}
