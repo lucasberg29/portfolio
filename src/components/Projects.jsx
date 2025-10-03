@@ -77,7 +77,7 @@ function Projects() {
             </Grid>
           ))}
           {openGlData.map((game, id) => (
-            <Grid key={id} item xs={12} sm={6} md={4} className="gameGridItem">
+            <Grid key={id} item xs={12} sm={16} md={4} className="gameGridItem">
               <div className="gameCard">
                 <h1 className="gameTitleHomepage">{game.name}</h1>
                 <a

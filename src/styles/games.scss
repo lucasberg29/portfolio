@@ -62,15 +62,6 @@ $openGlSiteColor: #575d63;
   padding-top: 10px;
 }
 
-.gameCard {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  margin: 10px 10px 10px 10px;
-  padding-right: 20px;
-}
-
 .swiper {
   height: 350px;
   border-left: 1px;
@@ -186,4 +177,16 @@ $openGlSiteColor: #575d63;
     margin-right: 0px;
     width: 100%;
   }
+}
+
+@media (max-width: 768px){
+.gameCard {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0px 0px 0px 0px;
+  padding-right: 20px;
+}
+
 }

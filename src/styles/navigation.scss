@@ -23,6 +23,7 @@ $red3: #ff5c5c;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .socialMediaLinks{
@@ -37,9 +38,10 @@ $red3: #ff5c5c;
   vertical-align: center;
   font-size: 1.5rem;
   font-weight: 900;
-    width: 100%;
+  width: 100%;
   height: 100%;
-  margin-left: 20px;
+  justify-content: start;
+  justify-items: center;
 }
 
 .navbarButton{
@@ -47,7 +49,7 @@ $red3: #ff5c5c;
   margin-right: 20px;
   margin-left: 8px;
   padding: 0.75rem 2.5rem;
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-family: monospace;
   background-color: #32c48d;
   color: white;
@@ -86,7 +88,7 @@ $btn-text: #7f1d1d;
 .customButton {
   margin-top: 0;
   padding: 6px 20px;
-  font-size: 0.75rem;
+  font-size: 1.95rem;
   font-family: monospace;
   background-color: $btn-primary;
   color: white;
@@ -221,6 +223,7 @@ $btn-text: #7f1d1d;
 .footerSocialMediaLinks{
   align-items: end;
   margin-right: 10px;
+  padding-right: 10px;
 }
 
 .navLinkLeft {
@@ -267,5 +270,35 @@ $btn-text: #7f1d1d;
 
   .expandedNav {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .navbarName{
+    font-size: 1.8rem;
+    justify-content: center ;
+    align-self: center;
+    align-items: center;
+    margin: 0px;
+  }
+
+
+  .navbarButton{
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;    
+  }
+
+  .navbarButtons {
+    align-items: center;
   }
 }
