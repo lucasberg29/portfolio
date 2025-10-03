@@ -13,21 +13,82 @@ $primaryColor: #4fd1c5; // text-teal-200
   border-radius: 3px;
 }
 
+$red1: #ff9a9a; 
+$red2: #ff7b7b; 
+$red3: #ff5c5c; 
+
 .navbar {
-  background-color: blue;
+  background: linear-gradient(90deg, $red1, $red2, $red3);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.socialMediaLinks{
+  align-items: end;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.navbarName{
+  display: flex;
+  vertical-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+    width: 100%;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.navbarButton{
+  margin-top: 0;
+  margin-right: 20px;
+  margin-left: 8px;
+  padding: 0.75rem 2.5rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+  background-color: #32c48d;
+  color: white;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    border-radius 0.3s ease;
+
+  &:hover {
+    background-color: darken(#32c48d, 10%);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+.navbarNavButtons{
+  display: flex;
 }
 
 .navbarButtons {
-  display: flex;
-  align-items: center;
+  display:flex;
+  align-items: end;
 }
+
+$btn-primary: #32c48d; 
+$btn-secondary: #c0392b; 
+$btn-accent: #ffffff; 
+$btn-text: #7f1d1d; 
 
 .customButton {
   margin-top: 0;
   padding: 6px 20px;
   font-size: 0.75rem;
   font-family: monospace;
-  background-color: teal;
+  background-color: $btn-primary;
   color: white;
   border-radius: 50px;
   display: block;
@@ -35,8 +96,31 @@ $primaryColor: #4fd1c5; // text-teal-200
   margin-right: auto;
   text-align: center;
 
-  &:hover {
-    background-color: #008080;
+    &.primary {
+    background-color: $btn-primary;
+    color: white;
+
+    &:hover {
+      background-color: darken($btn-primary, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: $btn-secondary;
+    color: white;
+
+    &:hover {
+      background-color: darken($btn-secondary, 10%);
+    }
+  }
+
+  &.accent {
+    background-color: $btn-accent;
+    color: $btn-secondary;
+
+    &:hover {
+      background-color: lighten($btn-accent, 5%);
+    }
   }
 }
 
@@ -128,9 +212,15 @@ $primaryColor: #4fd1c5; // text-teal-200
   color: black;
   transition: color 0.3s;
 
+
   &:hover {
     color: #fa5c5c;
   }
+}
+
+.footerSocialMediaLinks{
+  align-items: end;
+  margin-right: 10px;
 }
 
 .navLinkLeft {

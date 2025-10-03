@@ -8,7 +8,7 @@ function Contact() {
   useEffect(() => {}, []);
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div id="skillsTitle" className="sectionTitle">
         Contact
       </div>

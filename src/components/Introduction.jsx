@@ -7,9 +7,9 @@ function Introduction() {
 
   return (
     <div className="introduction">
-      <div className="salutation">Hello!</div>
+      <div className="salutation">Hi, I'm Lucas Berg!</div>
       <div className="presentation">
-        I'm Lucas Berg, a passionate software developer who loves to design and
+        I'm a passionate software developer who loves to design and
         develop games and interactive applications.
       </div>
     </div>

@@ -32,8 +32,11 @@
   @include pageSpacing;
 }
 
+$footer-burgundy: #4a1c1c; 
+
 .sitefooter {
-  background-color: teal;
+  background-color: $footer-burgundy;
+  color: #f2f2f2; 
   min-height: 80px;
   margin-top: 30px;
   display: flex;

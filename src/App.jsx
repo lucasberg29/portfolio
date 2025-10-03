@@ -43,11 +43,6 @@ function App() {
   return (
     <div className="siteWrapper">
       <Navbar></Navbar>
-      <Navigation
-        currentPage={selectedPage}
-        onNavigate={setSelectedPage}
-        className="navigation"
-      />
       <div className="siteBodyContainer">
         <div className="siteBody">{renderPage()}</div>
       </div>
