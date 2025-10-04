@@ -96,6 +96,7 @@
   width: 100%;
   align-items: flex-start;
   margin-bottom: 30px;
+  font-size: 0.9rem;
 }
 
 .skill {
@@ -149,11 +150,62 @@
   }
 
   .skillSection {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   #contactFormSalutation {
     margin: 10px;
+  }
+}
+
+@media (max-width: 500px)
+{
+  #skills{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  #contact{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .introduction {
+  width: 90%;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  } 
+
+  #contactFormSalutation {
+    margin: 0px;
+    display:flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .skillSectionTitle {
+    font-weight: bold;
+    font-size: 1.0rem;
+    text-align: start;
+  }
+
+  .skillSections {
+    display: flex;
+    width: 90%;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+  }
+
+  .skillSection{
+
+    width: 90%;
   }
 }

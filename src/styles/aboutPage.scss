@@ -53,15 +53,24 @@
 }
 
 @media (max-width: 1024px) {
+  .introduction{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
   .presentation {
-    
+    display:flex; 
     width: 90%;
     justify-content: left;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
   .salutation {
-    margin-left: 10px;
+    display:flex;
+    width: 90%;
+    align-items: center;
+    margin-left: 0px;
   }
 
   .contactForm {

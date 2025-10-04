@@ -177,6 +177,15 @@ $openGlSiteColor: #575d63;
     margin-right: 0px;
     width: 100%;
   }
+
+  .unityGamesGrid {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 10px 10px;
+}
 }
 
 @media (max-width: 768px){
@@ -186,7 +195,6 @@ $openGlSiteColor: #575d63;
   justify-content: center;
   justify-items: center;
   margin: 0px 0px 0px 0px;
-  padding-right: 20px;
+  padding-right: 0px;
 }
-
 }
