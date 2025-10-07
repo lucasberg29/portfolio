@@ -1,4 +1,7 @@
+@use "../styles/variables" as *;
+
 $gameWidth: 1280px;
+$gameWidthSmall: 1000px;
 $githubcolor: #4829ff;
 $gameModelHeaderHeight: 40px;
 $openGlSiteColor: #575d63;
@@ -51,7 +54,11 @@ $openGlSiteColor: #575d63;
 
 .gameModelHeader {
   height: $gameModelHeaderHeight;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  display:flex;
+  position: relative;
 }
 
 .gameModelHeaderName {
@@ -59,7 +66,13 @@ $openGlSiteColor: #575d63;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 10px;
+}
+
+.gameModalRightIcons{
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    gap: 0.75rem;
 }
 
 .swiper {
@@ -123,10 +136,12 @@ $openGlSiteColor: #575d63;
 }
 
 .closeGameIcon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  float: right;
+  display: flex;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.fullscreenIcon{
   cursor: pointer;
   z-index: 1100;
 }
@@ -171,7 +186,7 @@ $openGlSiteColor: #575d63;
   }
 }
 
-@media (max-width: 499px) {
+@media (max-width: $mobileWidth) {
   .gamesPage {
     margin-left: 0px;
     margin-right: 0px;
@@ -179,22 +194,37 @@ $openGlSiteColor: #575d63;
   }
 
   .unityGamesGrid {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0px;
-  padding: 0px;
-  margin: 10px 10px;
-}
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 10px 10px;
+  }
 }
 
-@media (max-width: 768px){
-.gameCard {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  margin: 0px 0px 0px 0px;
-  padding-right: 0px;
+@media (max-width: $laptopWidth){
+  .gameCard {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0px 0px 0px 0px;
+    padding-right: 0px;
+  }
 }
+
+@media (max-width: 1600px){
+  .modalContent {
+    width: $gameWidthSmall;
+    height: calc(($gameWidthSmall * (1080px / 1920px)) + $gameModelHeaderHeight);
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+  }
 }

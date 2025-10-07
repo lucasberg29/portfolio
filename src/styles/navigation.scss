@@ -1,4 +1,6 @@
-$primaryColor: #4fd1c5; // text-teal-200
+@use "../styles/variables" as *;
+
+$primaryColor: #4fd1c5;
 
 .navigation {
   width: 100%;
@@ -257,23 +259,7 @@ $btn-text: #7f1d1d;
 }
 
 // Media Queries
-@media (min-width: 500px) {
-  .navLinkLeft {
-    .navLink {
-      display: block;
-    }
-
-    .menuBurger {
-      display: none;
-    }
-  }
-
-  .expandedNav {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: $laptopWidth) {
   .navbar{
     flex-direction: column;
     align-items: center;
@@ -303,12 +289,28 @@ $btn-text: #7f1d1d;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobileWidth) {
   .navbarButton{
     margin-top: 0;
     margin-right: 10px;
     margin-left: 4px;
     padding: 0.25rem 0.5rem;
     font-size: 1.25rem;    
+  }
+}
+
+@media (min-width: $mobileWidth) {
+  .navLinkLeft {
+    .navLink {
+      display: block;
+    }
+
+    .menuBurger {
+      display: none;
+    }
+  }
+
+  .expandedNav {
+    display: none;
   }
 }

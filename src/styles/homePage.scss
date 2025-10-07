@@ -1,21 +1,4 @@
-.sectionTitle {
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-bottom: 10px;
-  width: 100%;
-  text-align: center;
-  text-decoration: underline;
-}
-
-#skills {
-  width: 100%;
-  margin-top: 20px;
-}
-
-#contactFormSalutation {
-  font-size: 1.5rem;
-  margin-top: 20px;
-}
+@use "../styles/variables" as *;
 
 @mixin customSection {
   border-width: 1px;
@@ -25,6 +8,28 @@
   margin-right: 20px;
   margin-bottom: 10px;
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#skills {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#contactFormSalutation {
+  display:flex;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .introduction {
@@ -142,30 +147,29 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: $laptopWidth) {
+  #contactFormSalutation {
+      width: 100%;
+      justify-content: center;
+  }
+
   .sectionTitle {
     width: 100%;
     justify-content: left;
-    margin-right: 30px;
   }
 
   .skillSection {
     margin-left: 0px;
     margin-right: 0px;
   }
-
-  #contactFormSalutation {
-    margin: 10px;
-  }
 }
 
-@media (max-width: 500px)
+@media (max-width: $mobileWidth)
 {
   #skills{
     display:flex;
     flex-direction: column;
     align-items: center;
-
   }
 
   #contact{
@@ -174,15 +178,7 @@
     width: 100%;
     align-items: center;
   }
-
-  .introduction {
-  width: 90%;
-  padding: 10px 10px 10px 10px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  } 
-
+  
   #contactFormSalutation {
     margin: 0px;
     display:flex;
@@ -190,6 +186,14 @@
     width: 90%;
     justify-content: center;
   }
+
+  .introduction {
+    width: 90%;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  } 
 
   .skillSectionTitle {
     font-weight: bold;
@@ -205,7 +209,6 @@
   }
 
   .skillSection{
-
     width: 90%;
   }
 }

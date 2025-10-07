@@ -1,3 +1,5 @@
+@use "../styles/variables" as *;
+
 .salutation {
   font-size: 3rem;
   min-height: 100px;
@@ -45,6 +47,12 @@
   }
 }
 
+.contact{
+  display:flex;
+  flex-direction: column;
+
+}
+
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -52,7 +60,7 @@
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $laptopWidth) {
   .introduction{
     width: 100%;
     justify-content: center;

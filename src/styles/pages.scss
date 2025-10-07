@@ -1,3 +1,5 @@
+@use "../styles/variables" as *;
+
 @mixin pageSpacing {
   margin-left: 20px;
   margin-top: 20px;
@@ -53,9 +55,11 @@ $footer-burgundy: #4a1c1c;
 
 .contactPage {
   width: 90%;
+  display:flex;
+  justify-content: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $laptopWidth) {
   .siteBodyContainer {
     margin-left: 30px;
   }
@@ -71,10 +75,8 @@ $footer-burgundy: #4a1c1c;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tabletWidth) {
   .contactPage {
-    margin-left: 10px;
-    margin-right: 10px;
     width: 90%;
   }
 }

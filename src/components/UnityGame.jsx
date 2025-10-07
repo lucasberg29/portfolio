@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react';
 import { Unity, useUnityContext } from "react-unity-webgl";
 import { stringUtils } from '../tools/utils';
 import CloseIcon from '@mui/icons-material/Close';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
 
 function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
-
     const gameTitle = stringUtils.ConvertCamelCaseToTitleCase(gameName);
     const baseURL = import.meta.env.VITE_BASE_URL;
     const gamePath = `${baseURL}/games/${gameName}/Build/`;
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const {unityProvider, sendMessage, isLoaded, loadingProgression, error, unload} = useUnityContext({
+    const {unityProvider, requestFullscreen, sendMessage, isLoaded, loadingProgression, error, unload} = useUnityContext({
         loaderUrl:      gamePath + "WebGL.loader.js",
         dataUrl:        gamePath + "WebGL.data",
         frameworkUrl:   gamePath + "WebGL.framework.js",
@@ -24,7 +24,18 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
 
     useEffect(() => {
         startGame();
-    }, []); 
+
+        if (isLoaded && window.createUnityInstance) {
+            const unityInstance = window.unityInstance;
+
+            if (unityInstance?.Module?.quit) {
+                const originalQuit = unityInstance.Module.quit;
+                unityInstance.Module.quit = () => {
+                    closeModal();
+                };
+            }
+        }
+    }, [isLoaded]); 
     
     function startGame() {
         setIsModalOpen(true);
@@ -55,7 +66,10 @@ function UnityGame({gameName, game, setCurrentGame, setCurrentGameProvider}) {
             <Modal className="gameModal" show={isModalOpen} onClose={closeModal}>
                 <div className="gameModelHeader">
                     <h2 className="gameModelHeaderName">{game.name}</h2>
-                    <CloseIcon className="closeGameIcon" onClick={closeModal}></CloseIcon>
+                    <div className="gameModalRightIcons">
+                        <FullscreenIcon className="fullscreenIcon" onClick={() => requestFullscreen(true)}></FullscreenIcon>
+                        <CloseIcon className="closeGameIcon" onClick={closeModal}></CloseIcon>
+                    </div>
                 </div>
                 <Unity className='unityGame' unityProvider={unityProvider} > </Unity>
             </Modal>
