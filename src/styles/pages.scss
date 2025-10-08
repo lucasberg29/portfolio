@@ -34,11 +34,11 @@
   @include pageSpacing;
 }
 
-$footer-burgundy: #4a1c1c; 
+$footer-burgundy: #4a1c1c;
 
 .sitefooter {
   background-color: $footer-burgundy;
-  color: #f2f2f2; 
+  color: #f2f2f2;
   min-height: 80px;
   margin-top: 30px;
   display: flex;
@@ -54,9 +54,8 @@ $footer-burgundy: #4a1c1c;
 }
 
 .contactPage {
-  width: 100%;
   align-items: center;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 

@@ -20,8 +20,13 @@
   width: 100%;
 }
 
+.contactComponent {
+  display: flex;
+  width: 100%;
+}
+
 .customInputField {
-  margin-bottom: 100px;
+  margin-bottom: 1000px;
 
   .MuiOutlinedInput-root {
     border-radius: 24px;
@@ -47,10 +52,9 @@
   }
 }
 
-.contact{
-  display:flex;
+.contact {
+  display: flex;
   flex-direction: column;
-
 }
 
 .contactForm {
@@ -61,21 +65,21 @@
 }
 
 @media (max-width: $laptopWidth) {
-  .introduction{
+  .introduction {
     width: 100%;
     justify-content: center;
     align-items: center;
   }
 
   .presentation {
-    display:flex; 
+    display: flex;
     width: 90%;
     justify-content: left;
     margin-left: 0px;
   }
 
   .salutation {
-    display:flex;
+    display: flex;
     width: 90%;
     align-items: center;
     margin-left: 0px;

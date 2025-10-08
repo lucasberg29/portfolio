@@ -15,9 +15,9 @@ $primaryColor: #4fd1c5;
   border-radius: 3px;
 }
 
-$red1: #ff9a9a; 
-$red2: #ff7b7b; 
-$red3: #ff5c5c; 
+$red1: #ff9a9a;
+$red2: #ff7b7b;
+$red3: #ff5c5c;
 
 .navbar {
   background: linear-gradient(90deg, $red1, $red2, $red3);
@@ -28,14 +28,14 @@ $red3: #ff5c5c;
   align-items: center;
 }
 
-.socialMediaLinks{
+.socialMediaLinks {
   align-items: end;
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-.navbarName{
+.navbarName {
   display: flex;
   vertical-align: center;
   font-size: 1.5rem;
@@ -46,7 +46,7 @@ $red3: #ff5c5c;
   justify-items: center;
 }
 
-.navbarButton{
+.navbarButton {
   margin-top: 0;
   margin-right: 20px;
   margin-left: 8px;
@@ -62,9 +62,7 @@ $red3: #ff5c5c;
 
   border: none;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    border-radius 0.3s ease;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
 
   &:hover {
     background-color: darken(#32c48d, 10%);
@@ -73,19 +71,19 @@ $red3: #ff5c5c;
   }
 }
 
-.navbarNavButtons{
+.navbarNavButtons {
   display: flex;
 }
 
 .navbarButtons {
-  display:flex;
+  display: flex;
   align-items: end;
 }
 
-$btn-primary: #32c48d; 
-$btn-secondary: #c0392b; 
-$btn-accent: #ffffff; 
-$btn-text: #7f1d1d; 
+$btn-primary: #32c48d;
+$btn-secondary: #c0392b;
+$btn-accent: #ffffff;
+$btn-text: #7f1d1d;
 
 .customButton {
   margin-top: 0;
@@ -100,7 +98,7 @@ $btn-text: #7f1d1d;
   margin-right: auto;
   text-align: center;
 
-    &.primary {
+  &.primary {
     background-color: $btn-primary;
     color: white;
 
@@ -216,13 +214,12 @@ $btn-text: #7f1d1d;
   color: black;
   transition: color 0.3s;
 
-
   &:hover {
     color: #fa5c5c;
   }
 }
 
-.footerSocialMediaLinks{
+.footerSocialMediaLinks {
   align-items: end;
   margin-right: 10px;
   padding-right: 10px;
@@ -260,28 +257,27 @@ $btn-text: #7f1d1d;
 
 // Media Queries
 @media (max-width: $laptopWidth) {
-  .navbar{
+  .navbar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0px;
   }
 
-  .navbarName{
+  .navbarName {
     font-size: 1.8rem;
-    justify-content: center ;
+    justify-content: center;
     align-self: center;
     align-items: center;
     margin: 0px;
   }
 
-
-  .navbarButton{
+  .navbarButton {
     margin-top: 0;
     margin-right: 10px;
     margin-left: 4px;
     padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;    
+    font-size: 1.25rem;
   }
 
   .navbarButtons {
@@ -290,12 +286,12 @@ $btn-text: #7f1d1d;
 }
 
 @media (max-width: $mobileWidth) {
-  .navbarButton{
+  .navbarButton {
     margin-top: 0;
     margin-right: 10px;
     margin-left: 4px;
     padding: 0.25rem 0.5rem;
-    font-size: 1.25rem;    
+    font-size: 1.25rem;
   }
 }
 

@@ -48,77 +48,75 @@ function ContactForm() {
   };
 
   return (
-    <div>
-      <div>
-        <form className="contactForm" onSubmit={handleSubmit}>
-          <div id="nameAndEmailContactForm">
-            <TextField
-              className="customInputField"
-              fullWidth
-              label="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              variant="outlined"
-              margin="normal"
-              required
-            />
-            <TextField
-              className="customInputField"
-              fullWidth
-              label="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              variant="outlined"
-              margin="normal"
-              required
-            />
-          </div>
+    <div className="contactComponent">
+      <form className="contactForm" onSubmit={handleSubmit}>
+        <div id="nameAndEmailContactForm">
           <TextField
             className="customInputField"
             fullWidth
-            label="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            label="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             variant="outlined"
             margin="normal"
             required
           />
-          <Button
-            type="submit"
-            variant="contained"
-            size="small"
-            sx={{
-              mt: 3,
-              px: 10,
-              py: 1.5,
-              fontSize: "0.75rem",
-              fontFamily: "monospace",
-              backgroundColor: "teal",
-              color: "white",
-              borderRadius: "50px",
-              mx: "auto",
-              display: "block",
-              "&:hover": {
-                backgroundColor: "#008080",
-              },
-            }}
-          >
-            Send
-          </Button>
-        </form>
-        {status && (
-          <Typography
-            className={`statusMessage ${responseClass}`}
-            variant="body1"
-            color="textSecondary"
-            align="center"
-            sx={{ mt: 2 }}
-          >
-            {status}
-          </Typography>
-        )}
-      </div>
+          <TextField
+            className="customInputField"
+            fullWidth
+            label="Email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            variant="outlined"
+            margin="normal"
+            required
+          />
+        </div>
+        <TextField
+          className="customInputField"
+          fullWidth
+          label="Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          variant="outlined"
+          margin="normal"
+          required
+        />
+        <Button
+          type="submit"
+          variant="contained"
+          size="small"
+          sx={{
+            mt: 3,
+            px: 10,
+            py: 1.5,
+            fontSize: "0.75rem",
+            fontFamily: "monospace",
+            backgroundColor: "teal",
+            color: "white",
+            borderRadius: "50px",
+            mx: "auto",
+            display: "block",
+            "&:hover": {
+              backgroundColor: "#008080",
+            },
+          }}
+        >
+          Send
+        </Button>
+      </form>
+      {status && (
+        <Typography
+          className={`statusMessage ${responseClass}`}
+          variant="body1"
+          color="textSecondary"
+          align="center"
+          sx={{ mt: 2 }}
+        >
+          {status}
+        </Typography>
+      )}
     </div>
   );
 }
