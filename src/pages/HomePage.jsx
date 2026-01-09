@@ -10,50 +10,56 @@ function HomePage({ setSelectedPage, currentPage }) {
 
   const [pages, setPages] = useState([]);
 
-  function GoToComponent(component){
-    switch (component)
-    {
+  function GoToComponent(component) {
+    switch (component) {
       case "home":
-            setPages([
-      <Introduction key="home" id="home" />,
-      <Projects GoToComponent={GoToComponent} key="projects" id="projects" />,
-      <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
-      <Contact GoToComponent={GoToComponent} key="contact" id="contact" />
-      ]);
-          break;
+        setPages([
+          <Introduction key="home" id="home" />,
+          <Projects
+            GoToComponent={GoToComponent}
+            key="projects"
+            id="projects"
+          />,
+          <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
+          <Contact GoToComponent={GoToComponent} key="contact" id="contact" />,
+        ]);
+        break;
       case "projects":
-            setPages([
-      <Projects GoToComponent={GoToComponent} key="projects" id="projects" />,
-      <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
-      <Contact GoToComponent={GoToComponent} key="contact" id="contact" />
-      ]);
-          break;
+        setPages([
+          <Projects
+            GoToComponent={GoToComponent}
+            key="projects"
+            id="projects"
+          />,
+          <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
+          <Contact GoToComponent={GoToComponent} key="contact" id="contact" />,
+        ]);
+        break;
       case "contact":
-            setPages([
-                    <Contact GoToComponent={GoToComponent} key="contact" id="contact" />,
-      <Projects GoToComponent={GoToComponent} key="projects" id="projects" />,
-      <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
-
-      ]);
-          break;
+        setPages([
+          <Contact GoToComponent={GoToComponent} key="contact" id="contact" />,
+          <Projects
+            GoToComponent={GoToComponent}
+            key="projects"
+            id="projects"
+          />,
+          <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
+        ]);
+        break;
     }
   }
 
   useEffect(() => {
     setSelectedPage("home");
-      setPages([
+    setPages([
       <Introduction key="home" id="home" />,
       <Projects GoToComponent={GoToComponent} key="projects" id="projects" />,
       <Skills GoToComponent={GoToComponent} key="skills" id="skills" />,
-      <Contact GoToComponent={GoToComponent} key="contact" id="contact" />
+      <Contact GoToComponent={GoToComponent} key="contact" id="contact" />,
     ]);
   }, []);
 
-  return (
-    <div className="homePage">
-      {pages}
-    </div>
-  );
+  return <div className="homePage">{pages}</div>;
 }
 
 export default HomePage;

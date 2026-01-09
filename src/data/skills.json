@@ -4,7 +4,6 @@
     "name": "languages",
     "bulletPoints": [
       {
-        "id": "1",
         "name": "Portuguese",
         "src": "https://flagcdn.com/w320/br.png",
         "level": "Native speaker",
@@ -12,7 +11,6 @@
         "short": "pt-br"
       },
       {
-        "id": "2",
         "name": "English",
         "src": "https://flagcdn.com/w320/ca.png",
         "level": "Fluent",
@@ -26,36 +24,37 @@
     "name": "programminglanguages",
     "bulletPoints": [
       {
-        "id": "1",
         "name": "C/C++"
       },
       {
-        "id": "2",
         "name": "C#"
       },
       {
-        "id": "3",
         "name": "Python"
       },
       {
-        "id": "4",
-        "name": "JavaScript"
-      },
-      {
-        "id": "5",
-        "name": "C/C++"
-      },
-      {
-        "id": "6",
-        "name": "PHP"
-      },
-      {
-        "id": "7",
         "name": "Java"
       },
       {
-        "id": "9",
+        "name": "JavaScript"
+      },
+      {
+        "name": "PHP"
+      },
+      {
         "name": "HTML"
+      },
+      {
+        "name": "XML"
+      },
+      {
+        "name": "JSON"
+      },
+      {
+        "name": "CSS"
+      },
+      {
+        "name": "Sass"
       }
     ]
   },

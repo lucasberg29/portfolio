@@ -43,20 +43,27 @@ function Skills() {
         </div>
         <div className="skillSection">
           <div className="skillSectionTitle">Software / Frameworks</div>
-          <div className="skill">
-            <div>Unity</div>
-          </div>
-          <div className="skill">
-            <div>Unreal</div>
-          </div>
-          <div className="skill">
-            <div>Android Studio</div>
-          </div>
+          <Grid container spacing={0.1}>
+            {software.map((language) => (
+              <Grid
+                key={language.name}
+                item
+                xs={12}
+                sm={12}
+                md={5}
+                className="gameGridItem"
+              >
+                <div className="skill">
+                  <div>{language.name}</div>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
         </div>
         <div className="skillSection">
           <div className="skillSectionTitle">Languages</div>
-          {languages.map((language, id) => (
-            <div className="skill" key={id}>
+          {languages.map((language) => (
+            <div className="skill" key={language.name}>
               <img
                 style={{
                   width: "32px",
