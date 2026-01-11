@@ -1,0 +1,86 @@
+@use "../styles/variables" as *;
+
+@mixin animatedButton($backgroundColour) {
+  margin-top: 0;
+
+  padding: 0.75rem 2.5rem;
+  font-size: 1.25rem;
+  font-family: monospace;
+  background-color: $backgroundColour;
+  color: white;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+
+  &:hover {
+    background-color: darken($backgroundColour, 10%);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+.navbarButton {
+  margin-right: 20px;
+  margin-left: 8px;
+  @include animatedButton($btn-primary);
+}
+
+.customButton {
+  margin-right: 20px;
+  margin-left: 8px;
+  @include animatedButton(red);
+}
+
+.statusClearSendButtons {
+  display: flex;
+  width: 100%;
+}
+
+.clearAndSendButtons {
+  display: flex;
+
+  align-items: end;
+  justify-self: end;
+  justify-content: end;
+  align-self: flex-end;
+
+  align-items: end;
+  align-self: flex-end;
+  text-align: end;
+  justify-content: end;
+  justify-self: end;
+  align-content: end;
+  width: 100%;
+}
+
+.clearMessageButton {
+  margin-right: 20px;
+  margin-left: 8px;
+  @include animatedButton($btn-warning);
+}
+
+.sendMessageButton {
+  margin-right: 0px;
+  margin-left: 8px;
+  @include animatedButton($btn-secondary);
+}
+
+.downloadResumeButton.MuiButton-root {
+  padding: 12px 80px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  background-color: teal;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  &:hover {
+    background-color: #008080;
+  }
+}

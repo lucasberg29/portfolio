@@ -11,50 +11,49 @@ function SocialMediaLinks(handleNavigation) {
 
   return (
     <div className="socialMediaLinks">
-        <div className="gameTag">
-          <a
-            className="customIcon githubIcon"
-            href="https://github.com/lucasberg29"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon
-              style={{
-                width: "24px",
-                height: "24px",
-              }}
-            />
-          </a>
-        </div>
-        <div className="gameTag">
-          <a
-            className="customIcon linkedinIcon"
-            href="https://www.linkedin.com/in/lucas-berg-dos-santos-b78297221/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInIcon
-              sx={{
-                color: "white",
-                width: "24px",
-                height: "24px",
-                backgroundColor: "rgb(25, 118, 210)",
-              }}
-            />
-          </a>
-        </div>
-
-        <div className="gameTag">
-          <a
-            className="customIcon itchCustomIcon"
-            href="https://lucasberg29.itch.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img className="itchLogoImage" src={ItchLogo} alt="Itch.io Logo" />
-          </a>
-        </div>
+      <div className="gameTag">
+        <a
+          className="customIcon githubIcon"
+          href="https://github.com/lucasberg29"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHubIcon
+            style={{
+              width: "24px",
+              height: "24px",
+            }}
+          />
+        </a>
       </div>
+      <div className="gameTag">
+        <a
+          className="customIcon linkedinIcon"
+          href="https://www.linkedin.com/in/lucas-berg-dos-santos-b78297221/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedInIcon
+            sx={{
+              color: "white",
+              width: "24px",
+              height: "24px",
+              backgroundColor: "rgb(25, 118, 210)",
+            }}
+          />
+        </a>
+      </div>
+      <div className="gameTag">
+        <a
+          className="customIcon itchCustomIcon"
+          href="https://lucasberg29.itch.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="itchLogoImage" src={ItchLogo} alt="Itch.io Logo" />
+        </a>
+      </div>
+    </div>
   );
 }
 

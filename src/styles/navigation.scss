@@ -46,31 +46,6 @@ $red3: #ff5c5c;
   justify-items: center;
 }
 
-.navbarButton {
-  margin-top: 0;
-  margin-right: 20px;
-  margin-left: 8px;
-  padding: 0.75rem 2.5rem;
-  font-size: 1.25rem;
-  font-family: monospace;
-  background-color: #32c48d;
-  color: white;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-radius 0.3s ease;
-
-  &:hover {
-    background-color: darken(#32c48d, 10%);
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 0px;
-  }
-}
-
 .navbarNavButtons {
   display: flex;
 }
@@ -78,52 +53,6 @@ $red3: #ff5c5c;
 .navbarButtons {
   display: flex;
   align-items: end;
-}
-
-$btn-primary: #32c48d;
-$btn-secondary: #c0392b;
-$btn-accent: #ffffff;
-$btn-text: #7f1d1d;
-
-.customButton {
-  margin-top: 0;
-  padding: 6px 20px;
-  font-size: 1.95rem;
-  font-family: monospace;
-  background-color: $btn-primary;
-  color: white;
-  border-radius: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-
-  &.primary {
-    background-color: $btn-primary;
-    color: white;
-
-    &:hover {
-      background-color: darken($btn-primary, 10%);
-    }
-  }
-
-  &.secondary {
-    background-color: $btn-secondary;
-    color: white;
-
-    &:hover {
-      background-color: darken($btn-secondary, 10%);
-    }
-  }
-
-  &.accent {
-    background-color: $btn-accent;
-    color: $btn-secondary;
-
-    &:hover {
-      background-color: lighten($btn-accent, 5%);
-    }
-  }
 }
 
 .customIcon {
@@ -220,7 +149,7 @@ $btn-text: #7f1d1d;
 }
 
 .footerSocialMediaLinks {
-  align-items: end;
+  justify-self: end;
   margin-right: 10px;
   padding-right: 10px;
 }

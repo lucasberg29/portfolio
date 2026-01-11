@@ -16,7 +16,7 @@
 }
 
 #contactFormSalutation {
-  display:flex;
+  display: flex;
   font-size: 1.5rem;
   margin-top: 20px;
   align-items: center;
@@ -121,8 +121,9 @@
 }
 
 #siteSignature {
-  width: 100%;
-  height: 100%;
+  align-self: center;
+  justify-self: start;
+  min-width: 20%;
   margin-left: 20px;
 }
 
@@ -146,11 +147,10 @@
   height: 30px;
 }
 
-
 @media (max-width: $laptopWidth) {
   #contactFormSalutation {
-      width: 100%;
-      justify-content: center;
+    width: 100%;
+    justify-content: center;
   }
 
   .sectionTitle {
@@ -164,24 +164,23 @@
   }
 }
 
-@media (max-width: $mobileWidth)
-{
-  #skills{
-    display:flex;
+@media (max-width: $mobileWidth) {
+  #skills {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #contact{
-    display:flex;
+  #contact {
+    display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
-  
+
   #contactFormSalutation {
     margin: 0px;
-    display:flex;
+    display: flex;
     align-items: center;
     width: 90%;
     justify-content: center;
@@ -193,11 +192,11 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-  } 
+  }
 
   .skillSectionTitle {
     font-weight: bold;
-    font-size: 1.0rem;
+    font-size: 1rem;
     text-align: start;
   }
 
@@ -208,7 +207,7 @@
     font-size: 0.9rem;
   }
 
-  .skillSection{
+  .skillSection {
     width: 90%;
   }
 }

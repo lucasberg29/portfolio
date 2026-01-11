@@ -11,13 +11,24 @@
   width: 60%;
 }
 
+#nameEmailMessageContactForm {
+  width: 100%;
+  display: flex;
+  column-gap: 20px;
+}
+
 #nameAndEmailContactForm {
   display: flex;
   flex: 1;
   align-items: center;
   text-align: center;
-  gap: 10px;
-  width: 100%;
+  flex-direction: column;
+  width: 50%;
+}
+
+#messageContactForm {
+  width: 50%;
+  display: flex;
 }
 
 .contactComponent {
@@ -25,12 +36,18 @@
   width: 100%;
 }
 
-.customInputField {
-  margin-bottom: 1000px;
+.messageInputField {
+  .MuiOutlinedInput-root {
+    height: 100%;
+    align-items: "flex-start";
+    text-align: "left";
+    overflow: auto;
+  }
+}
 
+.customInputField {
   .MuiOutlinedInput-root {
     border-radius: 24px;
-
     fieldset {
       border-radius: 24px;
     }

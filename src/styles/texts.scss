@@ -1,19 +1,26 @@
+.statusMessage {
+  min-height: 24px;
+  white-space: nowrap;
+  min-width: 50%;
+  align-items: start;
+  align-self: flex-start;
+  text-align: start;
+  justify-content: start;
+  justify-self: start;
+  align-content: start;
+  &.success {
+    color: green;
+  }
 
-.statusMessage{
+  &.warning {
+    color: yellow;
+  }
 
-    &.success{
-        color: green;
-    }
-
-    &.warning{
-        color: yellow;
-    }
-
-    &.failed{
-        color: red;
-    }
+  &.failed {
+    color: red;
+  }
 }
 
-.modalGameTitle{
-    font-weight: bold;
+.modalGameTitle {
+  font-weight: bold;
 }

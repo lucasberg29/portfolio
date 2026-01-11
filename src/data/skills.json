@@ -63,27 +63,24 @@
     "name": "software",
     "bulletPoints": [
       {
-        "id": "1",
         "name": "Unity"
       },
       {
-        "id": "2",
         "name": "Unreal"
       },
       {
-        "id": "3",
+        "name": "Godot"
+      },
+      {
         "name": "Android Studio"
       },
       {
-        "id": "4",
         "name": "React"
       },
       {
-        "id": "5",
         "name": "Vue"
       },
       {
-        "id": "6",
         "name": ".NET"
       }
     ]
