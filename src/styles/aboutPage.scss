@@ -81,6 +81,36 @@
   width: 100%;
 }
 
+@media (max-width: $mobileWidth) {
+  #nameEmailMessageContactForm {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nameAndEmailContactForm {
+    width: 100%;
+  }
+
+  #messageContactForm {
+    width: 100%;
+  }
+}
+
+@media (max-width: $tabletWidth) {
+  #nameEmailMessageContactForm {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nameAndEmailContactForm {
+    width: 100%;
+  }
+
+  #messageContactForm {
+    width: 100%;
+  }
+}
+
 @media (max-width: $laptopWidth) {
   .introduction {
     width: 100%;
